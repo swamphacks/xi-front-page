@@ -10,46 +10,56 @@
 	function ring() {
 		const tl = gsap.timeline();
 
-		// reset transforms
-		gsap.set([bell, clapper], { rotate: 0, transformOrigin: 'top center' });
+		gsap.set(bell, { rotate: 0, transformOrigin: 'top center' });
+		gsap.set(clapper, { rotate: 0, transformOrigin: 'top center' });
 
-		// main ringing motion
 		tl.to(bell, {
-			rotate: 15,
-			duration: 0.25,
-			yoyo: true,
-			repeat: 8,
+			rotate: 12,
+			duration: 0.3,
 			ease: 'sine.inOut'
-		}).to(
-			bell,
-			{
+		})
+			.to(bell, {
+				rotate: -12,
+				duration: 0.6,
+				yoyo: true,
+				repeat: 4,
+				ease: 'sine.inOut'
+			})
+			.to(bell, {
 				rotate: 0,
 				duration: 1.2,
-				ease: 'elastic.out(1, 0.3)'
-			},
-			'>'
-		);
+				ease: 'power2.out'
+			});
 
-		// clapper motion (slightly delayed and opposite phase)
 		tl.to(
 			clapper,
 			{
-				rotate: -20,
-				duration: 0.25,
-				yoyo: true,
-				repeat: 8,
+				rotate: -10,
+				duration: 0.3,
 				ease: 'sine.inOut'
 			},
-			0.05 // small delay so it lags behind
-		).to(
-			clapper,
-			{
-				rotate: 0,
-				duration: 1.2,
-				ease: 'elastic.out(1, 0.3)'
-			},
-			'>'
-		);
+			0.05 // minimal lag behind bell
+		)
+			.to(
+				clapper,
+				{
+					rotate: 10,
+					duration: 0.6,
+					yoyo: true,
+					repeat: 4,
+					ease: 'sine.inOut'
+				},
+				'>'
+			)
+			.to(
+				clapper,
+				{
+					rotate: 0,
+					duration: 1.2,
+					ease: 'power2.out'
+				},
+				'>'
+			);
 	}
 </script>
 
@@ -62,7 +72,7 @@
 		{@html Clapper}
 	</div>
 
-	<!-- Bell (middle) -->
+	<!-- Bell (middle, clickable) -->
 	<button
 		bind:this={bell}
 		on:click={ring}
@@ -71,9 +81,9 @@
 		{@html Bell}
 	</button>
 
-	<!-- Tower (in front) -->
+	<!-- Tower (front) -->
 	<div
-		class=" pointer-events-none relative z-20 h-auto w-[300px] [&_svg]:block [&_svg]:h-auto [&_svg]:w-full"
+		class="pointer-events-none relative z-20 h-auto w-[300px] [&_svg]:block [&_svg]:h-auto [&_svg]:w-full"
 	>
 		{@html CenturyTower}
 	</div>

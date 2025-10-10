@@ -1,33 +1,21 @@
 <script lang="ts">
 	import BushWall from '$lib/assets/BushWall.png';
-	import { onMount } from 'svelte';
 	import CenturyTower from './CenturyTower.svelte';
-	import Plane from './Plane.svelte';
-	import { gsap } from 'gsap';
-
-	let planeEl: HTMLDivElement;
-
-	onMount(() => {
-		const screenWidth = window.innerWidth;
-		const planeWidth = planeEl.offsetWidth;
-
-		// Start fully offscreen to the right
-		gsap.set(planeEl, { x: screenWidth, opacity: 1 });
-
-		// Animate to fully offscreen left
-		gsap.to(planeEl, {
-			x: -(planeWidth + 700), // end position offscreen left
-			duration: 30, // duration in seconds
-			repeat: -1, // loop infinitely
-			ease: 'linear' // constant speed
-		});
-	});
+	import MovingCloud from './MovingCloud.svelte';
+	import MovingPlane from './MovingPlane.svelte';
 </script>
 
 <div class="relative h-screen w-full overflow-hidden bg-sky-background">
-	<div bind:this={planeEl} class="absolute top-0 scale-[0.032] md:scale-[0.05] opacity-0">
-		<Plane />
-	</div>
+	<MovingPlane duration={30} />
+
+	<!-- Clouds -->
+
+	<MovingCloud variant={1} duration={85} />
+	<MovingCloud variant={2} duration={100} />
+	<MovingCloud variant={3} duration={110} />
+	<MovingCloud variant={4} duration={90} />
+	<MovingCloud variant={1} duration={85} />
+	<MovingCloud variant={3} duration={100} />
 
 	<!-- Title + Button Container -->
 	<div
@@ -58,15 +46,16 @@
 	</div>
 
 	<div
-		class="absolute bottom-0 left-[16%] origin-bottom-left translate-y-[3px] scale-[0.13] md:scale-[0.45]"
+		class="absolute bottom-0 left-[4%] md:left-[16%] z-49 origin-bottom-left translate-y-[3px] scale-[0.25] md:scale-[0.45]"
 	>
 		<CenturyTower />
 	</div>
 
 	<!-- Bush Wall -->
+	<!-- TODO: Replace this with the individual bushes but lined up together might be nicer -->
 	<img
 		src={BushWall}
 		alt="Bush wall"
-		class="pointer-events-none absolute bottom-[-10px] left-0 h-[7%] w-full object-cover select-none sm:h-1/8"
+		class="pointer-events-none absolute bottom-[-10px] left-0 z-50 h-[7%] w-full object-cover select-none sm:h-1/8"
 	/>
 </div>
