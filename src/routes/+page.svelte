@@ -3,6 +3,10 @@
 	import BushWall from '$lib/assets/BushWall.png';
 	import SwampHacksTitle from '$lib/assets/SwampHacks Title.png';
 	import CenturyTower from '$lib/assets/CenturyTower.png';
+	import Bush1 from '$lib/assets/svg-illustrations/svg bush_1.svg';
+	import Bush2 from '$lib/assets/svg-illustrations/svg bush_2.svg';
+	import Bush3 from '$lib/assets/svg-illustrations/svg bush_3.svg';
+	import Bush4 from '$lib/assets/svg-illustrations/svg bush_4.svg';
 </script>
 
 <main>
@@ -31,15 +35,22 @@
 		<img
 			src={CenturyTower}
 			alt="Century Tower"
-			class="pointer-events-none absolute bottom-0 left-[16%] h-[30%] sm:h-[90%] w-auto max-w-full object-contain select-none"
+			class="z-2 pointer-events-none absolute bottom-0 left-[16%] h-[30%] sm:h-[90%] w-auto max-w-full object-contain select-none"
 		/>
 
-		<!-- Bush Wall -->
-		<img
-			src={BushWall}
-			alt="Bush wall"
-			class="pointer-events-none absolute bottom-[-10px] left-0 h-[7%] sm:h-1/8 w-full object-cover select-none"
-		/>
+		<!-- SVG Bushes at bottom -->
+		<div class="absolute -bottom-2 left-0 w-full flex items-end pointer-events-none select-none">
+			{#each Array(24) as _, i}
+				{@const bushIndex = i % 4}
+				{@const bushSrc = [Bush1, Bush2, Bush3, Bush4][bushIndex]}
+				<img 
+					src={bushSrc} 
+					alt="Bush {bushIndex + 1}" 
+					class="h-6 sm:h-8 md:h-10 lg:h-12 xl:h-16 w-auto object-contain flex-shrink-0 -ml-1 sm:-ml-2 md:-ml-3 lg:-ml-4 xl:-ml-5" 
+				/>
+			{/each}
+		</div>
+
 	</div>
 
 	<div class="h-screen w-full bg-grass-background"></div>
