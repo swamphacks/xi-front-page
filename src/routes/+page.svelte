@@ -1,6 +1,8 @@
 <script>
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
+	import FAQ from '$lib/components/FAQ/FAQ.svelte';
+
 </script>
 
 <main>
@@ -9,7 +11,7 @@
 		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">
 			<Road />
 		</div>
-
+		<FAQ/>
 		<!-- Content goes here -->
 	</div>
 
