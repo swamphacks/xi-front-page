@@ -19,9 +19,7 @@
 
 	<!-- Title + Button Container -->
 	<div
-		class="absolute top-1/2 left-1/2 z-50 flex
-		   w-full -translate-x-1/2 -translate-y-1/2 flex-col
-		   items-center gap-4 space-y-6 select-none sm:w-fit md:top-[30%] md:left-2/5 md:translate-x-0 md:translate-y-0"
+		class="flex flex-col justify-center items-center h-full gap-6 z-50"
 	>
 		<div class="flex flex-col items-center justify-center gap-2">
 			<h1 class="font-beachday text-5xl md:text-6xl lg:text-8xl">SwampHacks XI</h1>
@@ -32,13 +30,13 @@
 		<!-- Button -->
 		<div class="flex w-full flex-col items-center justify-center gap-4">
 			<button
-				class="w-1/2 cursor-pointer rounded-md bg-button-primary py-3 font-beachday text-lg transition-all duration-100 hover:scale-105 md:py-4 md:text-2xl"
+				class="cursor-pointer rounded-md bg-button-primary py-3 px-12 font-beachday text-lg transition-all duration-100 hover:scale-105 md:py-4 md:text-2xl"
 			>
 				Register To Hack
 			</button>
 
 			<button
-				class="w-1/2 cursor-pointer rounded-md bg-button-primary py-3 font-beachday text-lg transition-all duration-100 hover:scale-105 md:py-4 md:text-2xl"
+				class="cursor-pointer rounded-md bg-button-primary py-3 px-12 font-beachday text-lg transition-all duration-100 hover:scale-105 md:py-4 md:text-2xl"
 			>
 				Apply to Mentor
 			</button>
