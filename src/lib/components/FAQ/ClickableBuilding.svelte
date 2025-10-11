@@ -2,9 +2,6 @@
 <script lang="ts">
     export let src = "$lib/assets/Hippodrome.png";
     export let alt = "Button Image";
-    function onClickTest() {
-        console.log("Button clicked!");
-    }
     export let onClick;
 </script>
 

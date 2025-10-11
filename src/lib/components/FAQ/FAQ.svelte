@@ -47,3 +47,11 @@
         <FAQModal onClose={handleClose} title ={modalTitle} faqs= {modalFaqs} />
     {/if}
 </div>
+
+
+// TODO
+// - Add more FAQ categories and associated buildings
+// - Organize buildings in layout to fit on screen
+// - Style the modal properly
+// - Add Text to clickable buildings
+// - (MAYBE) animate buildings to indicate clickability
