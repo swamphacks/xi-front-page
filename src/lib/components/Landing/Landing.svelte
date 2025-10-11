@@ -18,15 +18,15 @@
 	<MovingCloud variant={3} duration={100} />
 
 	<!-- Title + Button Container -->
-	<div class="z-50 flex h-full flex-col items-center justify-center gap-6">
-		<div class="flex flex-col items-center justify-center gap-2">
+	<div class="z-100 flex h-full flex-col items-center md:justify-center gap-6 md:ml-48 mt-48 md:mt-0">
+		<div class="flex flex-col items-center justify-center gap-2 z-100">
 			<h1 class="font-beachday text-5xl md:text-6xl lg:text-8xl">SwampHacks XI</h1>
 			<h2 class="font-beachday text-3xl md:text-4xl lg:text-5xl">January 23rd - 25th</h2>
 			<h3 class="font-beachday text-2xl md:text-3xl lg:text-4xl">Newell Hall</h3>
 		</div>
 
 		<!-- Button -->
-		<div class="flex w-full flex-col items-center justify-center gap-4">
+		<div class="flex w-full flex-col items-center justify-center gap-4 z-100">
 			<button
 				class="cursor-pointer rounded-md bg-button-primary px-12 py-3 font-beachday text-lg transition-all duration-100 hover:scale-105 md:py-4 md:text-2xl"
 			>

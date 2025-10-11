@@ -1,7 +1,51 @@
 <script lang="ts">
+	import { gsap } from 'gsap';
+	import { onMount } from 'svelte';
+	import Car_Front from '$lib/assets/Car_Front.png';
+
+	let car: HTMLImageElement;
+	let path: SVGPathElement;
+
+	let scrollY = $state(0);
+
+	onMount(() => {
+		window.addEventListener('scroll', () => {
+			console.log('Scrolling, current Y:', window.scrollY);
+			scrollY = window.scrollY;
+		});
+
+		gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+		let rotateTo = gsap.quickTo(car, 'rotation');
+		let prevDirection = 0;
+
+		gsap.to(car, {
+			scrollTrigger: {
+				trigger: path,
+				start: 'top center',
+				end: () => '+=' + path.getBoundingClientRect().height,
+				scrub: 0.5,
+				markers: true,
+				onUpdate: (self) => {
+					if (prevDirection !== self.direction) {
+						rotateTo(self.direction === 1 ? 0 : -180);
+						prevDirection = self.direction;
+					}
+				}
+			},
+			immediateRender: true,
+			motionPath: {
+				path: path,
+				align: path,
+				alignOrigin: [0.5, 0.5],
+				autoRotate: 90
+			}
+		});
+	});
 </script>
 
-<div class="scale-250 md:scale-300 lg:scale-400 xl:scale-475 origin-top">
+<div class="relative origin-top scale-250 md:scale-300 lg:scale-400 xl:scale-475">
+	<img bind:this={car} src={Car_Front} alt="Front of car" class="absolute w-16 xl:w-24" />
 	<svg
 		width="449"
 		height="797"
@@ -29,6 +73,7 @@
 				stroke-miterlimit="10"
 			/>
 			<path
+				bind:this={path}
 				d="M122.03 19.4609C132.64 56.5709 126.85 79.3409 119.26 93.5009C103.78 122.361 65.8898 112.911 34.5898 151.301C24.0198 164.261 4.84984 209.711 18.5298 242.451C27.1598 263.101 50.6598 272.801 56.4898 274.991C72.8198 281.121 109.49 281.561 121.45 281.221C154.39 280.301 183.25 290.071 202.47 324.881C218.33 353.611 210.51 396.331 187.14 416.711C169.5 432.101 127.01 433.841 100.28 439.621C73.2698 445.461 21.1798 497.221 17.0698 552.031C10.4998 639.641 37.2398 691.111 86.4098 726.911C165.52 784.511 259.66 780.421 268.89 780.491C345.42 781.111 405.72 760.011 429.19 744.481"
 				stroke="#FFD140"
 				stroke-width="3"
