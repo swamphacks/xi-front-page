@@ -1,21 +1,11 @@
 <script lang="ts">
-    const {onClose} = $props();
     import { slide } from 'svelte/transition';
     import { quintOut } from 'svelte/easing';
-    const faqs = [
-        {
-            question: 'What is Svelte?',
-            answer: 'Svelte is a radical new approach to building user interfaces...'
-        },
-        {
-            question: 'How is Svelte different from React or Vue?',
-            answer: 'Svelte has no virtual DOM...'
-        },
-        {
-            question: 'Do I need to learn a new syntax?',
-            answer: 'Not really! Svelte is mostly HTML, CSS, and JavaScript...'
-        }
-    ];
+
+    const {onClose, title, faqs} = $props();
+
+
+
     let activeIndex: number | null = $state(null);
 
     function toggle(index: number | null) {
@@ -25,7 +15,8 @@
 
 <div class="fixed inset-0 z-100 flex items-center justify-center bg-black/50">
     <div class="relative bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" onclick={onClose}>
+        <h1 class="justify-center">{title}</h1>
+        <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" onclick={() => onClose()}>
             &times;
         </button>
         {#each faqs as faq, index}
