@@ -1,15 +1,16 @@
 <script lang="ts">
+	import Button from '../Button.svelte';
+	import Link from '../Link.svelte';
 	import BushWall from './BushWall.svelte';
 	import CenturyTower from './CenturyTower.svelte';
 	import MovingCloud from './MovingCloud.svelte';
 	import MovingPlane from './MovingPlane.svelte';
 </script>
 
-<div class="relative h-screen w-full overflow-hidden bg-sky-background">
+<section class="relative h-screen w-full overflow-hidden bg-sky-background">
 	<MovingPlane duration={30} />
 
 	<!-- Clouds -->
-
 	<MovingCloud variant={1} duration={85} />
 	<MovingCloud variant={2} duration={100} />
 	<MovingCloud variant={3} duration={110} />
@@ -18,26 +19,28 @@
 	<MovingCloud variant={3} duration={100} />
 
 	<!-- Title + Button Container -->
-	<div class="z-100 flex h-full flex-col items-center md:justify-center gap-6 md:ml-48 mt-48 md:mt-0">
-		<div class="flex flex-col items-center justify-center gap-2 z-100">
+	<div
+		class="z-100 mt-48 flex h-full flex-col items-center gap-6 md:mt-0 md:ml-48 md:justify-center"
+	>
+		<div class="z-100 flex flex-col items-center justify-center gap-2">
 			<h1 class="font-beachday text-5xl md:text-6xl lg:text-8xl">SwampHacks XI</h1>
 			<h2 class="font-beachday text-3xl md:text-4xl lg:text-5xl">January 23rd - 25th</h2>
 			<h3 class="font-beachday text-2xl md:text-3xl lg:text-4xl">Newell Hall</h3>
 		</div>
 
 		<!-- Button -->
-		<div class="flex w-full flex-col items-center justify-center gap-4 z-100">
-			<button
-				class="cursor-pointer rounded-md bg-button-primary px-12 py-3 font-beachday text-lg transition-all duration-100 hover:scale-105 md:py-4 md:text-2xl"
+		<div class="z-100 flex w-full flex-col items-center justify-center gap-4">
+			<Link
+				href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application"
 			>
-				Register To Hack
-			</button>
+				<Button className="w-full">Register to Hack</Button>
+			</Link>
 
-			<button
-				class="cursor-pointer rounded-md bg-button-primary px-12 py-3 font-beachday text-lg transition-all duration-100 hover:scale-105 md:py-4 md:text-2xl"
+			<Link
+				href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/mentor-application"
 			>
-				Apply to Mentor
-			</button>
+				<Button className="w-full">Register to Mentor</Button>
+			</Link>
 		</div>
 	</div>
 
@@ -48,4 +51,4 @@
 	</div>
 
 	<BushWall />
-</div>
+</section>
