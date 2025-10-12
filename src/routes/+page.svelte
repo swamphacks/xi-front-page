@@ -1,6 +1,7 @@
 <script>
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
+	import About from '$lib/components/About.svelte';
 </script>
 
 <main>
@@ -11,6 +12,13 @@
 		</div>
 
 		<!-- Content goes here -->
+		
+		<!-- About -->
+		 <div class="h-1/3">
+			<About />
+			
+		 </div>
+		<!-- <About /> -->
 	</div>
 
 	<div class="w-full flex flex-col justify-center items-center bg-grass-background gap-8">
