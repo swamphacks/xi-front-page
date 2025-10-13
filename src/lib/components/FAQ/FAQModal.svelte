@@ -25,8 +25,8 @@
       onClose();
     }
   }} onclick={(e: any) => e.target === e.currentTarget && onClose()}>
-    <div class="relative bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-        <h1 class="justify-center">{title}</h1>
+    <div class="absolute bg-white p-6 rounded-lg shadow-lg max-w-xl w-full scale-110">
+        <h1 class="justify-center text-xl text-center font-bold">{title}</h1>
         <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 px-5 py-2.5 text-xl" onclick={() => onClose()}>
             &times;
         </button>

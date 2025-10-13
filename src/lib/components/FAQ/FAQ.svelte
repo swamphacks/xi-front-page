@@ -81,7 +81,7 @@
             answer: 'Yes. We will have a hardware desk with a variety of devices you can borrow throughout the event. We will release more information about what we’ll have as the event approaches'
         },
         {
-            question: 'How does project submission and judginge work?',
+            question: 'How does project submission and judging work?',
             answer: 'To submit your project, we use Devpost and we will provide you the link as we get closer to the event. Judging will follow an expo format, where you will demo your project to the judges who visit your table.'
         }
     ];
@@ -129,51 +129,48 @@
     ];
 </script>
 
-<div>
-    <div class="relative w-full h-[500px]">
+<div class="flex w-full flex-col items-center justify-center bg-grass-background">
+    <h2 class="font-beachday text-5xl text-white flex ">FAQ</h2>
+    <p class="text-md font-beachday text-neutral-200">(Click on each landmark to see more)</p>
+    <div class="relative w-auto flex justify-center items-center bg-grass-background py-10 px-20">
 
-        <div class="absolute top-[100px] left-[50px] w-[200px] transition-transform hover:scale-105">
+        <div class="transition-transform hover:scale-105 pr-10">
             <ClickableBuilding 
                 src={Hippodrome} 
-                alt="Hippodrome Building" 
+                alt="Hippodrome Building"
+                title = {generalTitle} 
                 onClick={() => handleOpen(generalTitle, generalFaqs)}
             />
         </div>
-
-        <div class="absolute top-[400px] left-[600px] w-[200px] transition-transform hover:scale-105">
+        <div class="transition-transform hover:scale-105">
             <ClickableBuilding 
                 src={Cade} 
                 alt="Cade Building" 
+                title = {cadeTitle}
                 onClick={() => handleOpen(cadeTitle, cadeFaqs)}
             />
         </div>
-
-        <div class="absolute top-[400px] left-[50px] w-[200px] transition-transform hover:scale-105">
+    </div>
+    <div class="relative w-auto flex justify-center items-center bg-grass-background px-20">
+        <div class="transition-transform hover:scale-105 pr-10">
             <ClickableBuilding 
                 src={Harn} 
                 alt="Harn Building" 
+                title = {harnTitle}
                 onClick={() => handleOpen(harnTitle, harnFaqs)}
             />
         </div>
 
-        <div class="absolute top-[100px] left-[600px] w-[200px] transition-transform hover:scale-105">
+        <div class="transition-transform hover:scale-105">
             <ClickableBuilding 
                 src={Museum} 
                 alt="Museum Building" 
+                title={museumTitle}
                 onClick={() => handleOpen(museumTitle, museumFaqs)}
             />
         </div>
-
-
-
     </div>
     {#if showModal}
         <FAQModal onClose={handleClose} title ={modalTitle} faqs= {modalFaqs} />
     {/if}
 </div>
-
-
-// TODO
-// - Style the modal properly + text
-// - (MAYBE) animate buildings to indicate clickability
-// - test email links
