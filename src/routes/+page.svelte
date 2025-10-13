@@ -1,8 +1,9 @@
 <script>
+	import BreakpointIndicator from '$lib/components/BreakpointIndicator.svelte';
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
 	import FAQ from '$lib/components/FAQ/FAQ.svelte';
-
+	import About from '$lib/components/About.svelte';
 </script>
 
 <main>
@@ -13,12 +14,24 @@
 		</div>
 		<FAQ/>
 		<!-- Content goes here -->
+		
+		<!-- About -->
+		 <div class="h-1/3">
+			<About />
+			
+		 </div>
+		<!-- <About /> -->
 	</div>
 
-	<div
-		class="relative h-screen w-full bg-center bg-grass-background"
-		style="background-image: url('/src/lib/assets/Lake.png');"
-	>
-		<!-- Optional: overlay content -->
+	<div class="flex w-full flex-col items-center justify-center gap-8 bg-grass-background py-16">
+		<h3 class="font-beachday text-5xl text-white">Sponsors</h3>
+		<div
+			class="relative flex min-h-[120vh] w-full items-center justify-center bg-cover bg-center"
+			style="background-image: url('/src/lib/assets/Lake.png');"
+		>
+			<h4 class="font-beachday text-2xl">To be announced!</h4>
+		</div>
 	</div>
 </main>
+
+<BreakpointIndicator />
