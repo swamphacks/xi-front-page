@@ -18,7 +18,7 @@
     >
         
         <div class="relative flex flex-col h-full w-full gap-4 bg-[#E8DCC4] p-6">
-            <h3 class="font-beachday text-gray-800 text-3xl text-center">{title}</h3>
+            <h3 class="font-beachday text-gray-800 text-4xl text-center">{title}</h3>
             <img src={src} alt={alt} style="display: block; width: 100%; height: auto;" class="opacity-90 group-hover:opacity-100 justify-center" />
         </div>
     </div>
