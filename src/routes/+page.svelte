@@ -1,4 +1,5 @@
 <script>
+	import BreakpointIndicator from '$lib/components/BreakpointIndicator.svelte';
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
 	import About from '$lib/components/About.svelte';
@@ -6,10 +7,16 @@
 
 <main>
 	<Landing />
-	<div class="relative h-[230vh] lg:h-[300vh] xl:h-[360vh] w-full bg-grass-background overflow-x-hidden">
-		<div class="absolute top-[-30px] lg:top-[-70px] xl:top-[-80px] left-3/5 lg:left-[65%] xl:left-3/5">
-			<Road />
-		</div>
+	<div
+		class="relative min-h-[200vh] w-full overflow-hidden bg-grass-background sm:min-h-[250vh] lg:min-h-[200vh] xl:min-h-[200vh]"
+	>
+		<Road />
+
+		<!-- Content 1 (About Us)-->
+		<div></div>
+
+		<!-- Content 2 (Tracks)-->
+		<div></div>
 
 		<!-- Content goes here -->
 		
@@ -21,15 +28,15 @@
 		<!-- <About /> -->
 	</div>
 
-	<div class="w-full flex flex-col justify-center items-center bg-grass-background gap-8">
-		<h3 class="font-beachday text-white text-5xl">Sponsors</h3>
+	<div class="flex w-full flex-col items-center justify-center gap-8 bg-grass-background py-16">
+		<h3 class="font-beachday text-5xl text-white">Sponsors</h3>
 		<div
-			class="relative h-screen w-full bg-center flex items-center justify-center bg-cover"
+			class="relative flex min-h-[120vh] w-full items-center justify-center bg-cover bg-center"
 			style="background-image: url('/src/lib/assets/Lake.png');"
 		>
-			<!-- Sponsor logos go here! -->
-
-			<h4 class=" font-beachday text-2xl">To be announced!</h4>
+			<h4 class="font-beachday text-2xl">To be announced!</h4>
 		</div>
 	</div>
 </main>
+
+<BreakpointIndicator />
