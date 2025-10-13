@@ -4,19 +4,30 @@
 
     const {onClose, title, faqs} = $props();
 
-
-
     let activeIndex: number | null = $state(null);
 
     function toggle(index: number | null) {
         activeIndex = index;
     }
+    function linkifyText(text: string) {
+    text = text.replace(
+      /([\w.-]+@[\w.-]+\.\w+)/g,
+      '<a href="mailto:$1" class="underline": underline>$1</a>'
+    );
+    text = text.replace("MentorLink", '<a href="https://sponsorlink.com" class="underline": underline>Here</a>');
+    return text
+  }
 </script>
 
-<div class="fixed inset-0 z-100 flex items-center justify-center bg-black/50">
+
+<div class="fixed inset-0 z-100 flex items-center justify-center bg-black/50" role="button" tabindex="0"   onkeydown={(event) => {
+    if (event.key === 'Escape') {
+      onClose();
+    }
+  }} onclick={(e: any) => e.target === e.currentTarget && onClose()}>
     <div class="relative bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
         <h1 class="justify-center">{title}</h1>
-        <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800" onclick={() => onClose()}>
+        <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 px-5 py-2.5 text-xl" onclick={() => onClose()}>
             &times;
         </button>
         {#each faqs as faq, index}
@@ -35,8 +46,8 @@
             </button>
 
             {#if activeIndex === index}
-                <div class="p-6 bg-white" transition:slide={{ duration: 300, easing: quintOut }}>
-                    <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+                <div class="pt-3 pb-6 px-6 bg-white" transition:slide={{ duration: 300, easing: quintOut }}>
+                    <p class="text-gray-700 leading-relaxed whitespace-pre-line">{@html linkifyText(faq.answer)}</p>
                 </div>
             {/if}
         </div>
