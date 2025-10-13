@@ -140,7 +140,7 @@
             />
         </div>
 
-        <div class="absolute top-[250px] left-[250px] w-[180px] transition-transform hover:scale-105">
+        <div class="absolute top-[400px] left-[600px] w-[200px] transition-transform hover:scale-105">
             <ClickableBuilding 
                 src={Cade} 
                 alt="Cade Building" 
@@ -148,7 +148,7 @@
             />
         </div>
 
-        <div class="absolute top-[250px] left-[50px] w-[200px] transition-transform hover:scale-105">
+        <div class="absolute top-[400px] left-[50px] w-[200px] transition-transform hover:scale-105">
             <ClickableBuilding 
                 src={Harn} 
                 alt="Harn Building" 
@@ -156,7 +156,7 @@
             />
         </div>
 
-        <div class="absolute top-[120px] left-[240px] w-[200px] transition-transform hover:scale-105">
+        <div class="absolute top-[100px] left-[600px] w-[200px] transition-transform hover:scale-105">
             <ClickableBuilding 
                 src={Museum} 
                 alt="Museum Building" 
@@ -174,7 +174,6 @@
 
 
 // TODO
-// - Organize buildings in layout to fit on screen
-// - Style the modal properly
-// - Add Text to clickable buildings
+// - Style the modal properly + text
 // - (MAYBE) animate buildings to indicate clickability
+// - test email links

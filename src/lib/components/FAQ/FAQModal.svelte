@@ -14,7 +14,7 @@
       /([\w.-]+@[\w.-]+\.\w+)/g,
       '<a href="mailto:$1" class="underline": underline>$1</a>'
     );
-    text = text.replace("MentorLink", '<a href="https://sponsorlink.com" class="underline": underline>Here</a>');
+    text = text.replace("MentorLink", '<a href="https://forms.gle/yiKGESaMMdHbRRTu5" target="_blank" class="underline": underline>Here</a>');
     return text
   }
 </script>
