@@ -15,6 +15,10 @@
 
 }
 
+body.modal-open {
+	overflow: hidden;
+}
+
 @font-face {
 	font-family: 'BeachDay';
 	src: url("/fonts/beachday.regular.otf") format("opentype");

@@ -2,12 +2,17 @@
 	import BreakpointIndicator from '$lib/components/BreakpointIndicator.svelte';
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
+	import FAQ from '$lib/components/FAQ/FAQ.svelte';
 	import About from '$lib/components/About.svelte';
 	import Tracks from '$lib/components/Tracks/Tracks.svelte';
 </script>
 
 <main>
 	<Landing />
+	<div class="relative h-[400vh] w-full bg-grass-background">
+		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">
+			<Road />
+		</div>
 	<div
 		class="relative min-h-[200vh] w-full overflow-hidden bg-grass-background sm:min-h-[250vh] lg:min-h-[200vh] xl:min-h-[200vh]"
 	>
@@ -27,6 +32,11 @@
 
 		<!-- About -->
 		<!-- <About /> -->
+		<!-- FAQ -->
+		 <div class="h-1/3">
+			<FAQ />
+		 </div>
+		<!-- <FAQ /> -->
 	</div>
 
 	<div class="flex w-full flex-col items-center justify-center gap-8 bg-grass-background py-16">
