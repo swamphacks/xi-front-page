@@ -2,10 +2,10 @@
 	import AboutTitle from '$lib/assets/about-us-title.svg';
 	import UFArch from '$lib/assets/uf-arch-building.svg';
 	import PostcardSticker from '$lib/assets/sh-postcard-sticker.png';
-    import SHPlaceholder from '$lib/assets/sh-placeholder-1.png';
-    import Squiggly from "$lib/assets/squiggly.svg";
-    import Airmail from "$lib/assets/air-mail.svg";
-    import UFArchesTitle from '$lib/assets/uf-arches-title.svg';
+	import SHPlaceholder from '$lib/assets/sh-placeholder-1.png';
+	import Squiggly from '$lib/assets/squiggly.svg';
+	import Airmail from '$lib/assets/air-mail.svg';
+	import UFArchesTitle from '$lib/assets/uf-arches-title.svg';
 	let showModal = false;
 	let currentImageIndex = 0;
 
@@ -13,18 +13,17 @@
 	const carouselImages = [
 		{
 			src: SHPlaceholder,
-			alt: "Placeholder"
+			alt: 'Placeholder'
 		},
 		{
 			src: SHPlaceholder,
-			alt: "Placeholder"
+			alt: 'Placeholder'
 		},
 		{
 			src: SHPlaceholder,
-			alt: "Placeholder"
+			alt: 'Placeholder'
 		}
 	];
-	
 
 	function toggleModal() {
 		showModal = !showModal;
@@ -43,29 +42,33 @@
 	}
 </script>
 
-<div class="flex mt-20 gap-6 h-full w-full flex-col items-end justify-center">
-	<!-- <img
-		src={UFArch}
-		alt="UF Arch Building"
-		class="mr-auto h-auto none max-w-full md:mr-10 md:w-[15rem] lg:w-[30rem] xl:w-[40rem]"
-	/> -->
+<div class="mt-16 flex h-full w-full flex-col items-center gap-6 md:ml-24 md:items-start">
 	<img
 		src={AboutTitle}
 		alt="About Us Title"
-		class="h-auto w-[15rem] max-w-full md:mr-10 md:mt-80 md:w-[18rem] lg:w-[30rem] xl:mt-96 xl:w-[40rem]"
+		class="mt-8 h-auto w-[15rem] max-w-full md:mt-12 md:mr-10 md:w-[18rem] lg:mt-16 lg:w-[30rem] xl:mt-20 xl:w-[40rem]"
 	/>
-
-	<div class="flex w-[22rem] md:mr-10 md:w-[34rem] lg:w-[44rem] xl:w-[60rem] items-center justify-center">
+	<div
+		class="flex w-[95%] items-center justify-center md:mr-10 md:w-[34rem] lg:w-[44rem] xl:w-[60rem]"
+	>
 		<div
 			class="flex size-full -rotate-1 transform gap-2 border-2 border-dashed bg-white p-2 shadow-2xl transition-transform duration-300 hover:-rotate-1"
 		>
 			<div class="relative flex h-full w-full gap-4 bg-[#E8DCC4] p-6">
 				<!-- Postcard Image/Icon Area -->
-				<div class="relative mb-3 flex flex-col h-full flex-1/2 items-center justify-center text-7xl">
-                    <img src={UFArchesTitle} alt="UF Arches Title">
-					<img src={UFArch} on:click={toggleModal} alt="UF Arch Building" class="gentle-bob hover:scale-102 opacity-80 hover:opacity-100" />
+				<div
+					class="relative mb-3 flex h-full flex-1/2 flex-col items-center justify-center text-7xl"
+				>
+					<img src={UFArchesTitle} alt="UF Arches Title" />
+					<img
+						src={UFArch}
+						on:click={toggleModal}
+						alt="UF Arch Building"
+						class="gentle-bob opacity-80 hover:scale-102 hover:opacity-100"
+					/>
 					<!-- Magnifying Glass Icon -->
 					<button
+						aria-label="View larger image"
 						on:click={toggleModal}
 						class="absolute top-1/3 right-10 z-10 rounded-full bg-white/80 p-2 shadow-lg transition-all duration-200 hover:scale-110 hover:bg-white"
 					>
@@ -90,74 +93,118 @@
 
 				<!-- Postcard Content Carousel -->
 				<div
-					class="z-2 flex h-48 md:h-96 lg:h-[28rem] xl:h-[32rem] flex-1/2 flex-col items-center justify-center gap-6 font-mono leading-relaxed text-gray-800"
+					class="z-2 flex h-48 flex-1/2 flex-col items-center justify-center gap-2 md:gap-6 font-mono leading-relaxed text-gray-800 md:h-96 lg:h-[28rem] xl:h-[32rem]"
 				>
-					<div class="text-sm md:text-xl lg:text-2xl xl:text-4xl font-bold">Greetings from SwampHacks!</div>
+					<div class="text-sm font-bold md:text-xl lg:text-2xl xl:text-4xl">
+						Greetings from SwampHacks!
+					</div>
 					<!-- Carousel Image -->
-					<div class="relative h-20 md:h-40 lg:h-48 xl:h-50 flex items-center justify-center mb-2">
-						<img 
-							src={carouselImages[currentImageIndex].src} 
+					<div class="relative mb-2 flex h-20 items-center justify-center md:h-40 lg:h-48 xl:h-50">
+						<img
+							src={carouselImages[currentImageIndex].src}
 							alt={carouselImages[currentImageIndex].alt}
-							class="max-h-full max-w-full object-contain border-2 border-dashed"
+							class="max-h-full max-w-full border-2 border-dashed object-contain"
 						/>
 					</div>
 					<!-- Navigation Controls -->
-					<div class="flex items-center justify-center gap-1 md:gap-2 mb-2">
-						<button 
+					<div class="mb-2 flex items-center justify-center gap-1 md:gap-2">
+						<button
 							on:click={prevImage}
-							class="p-0.5 md:p-1 rounded-full bg-white/80 hover:bg-white shadow-sm transition-all duration-200"
+							class="rounded-full bg-white/80 p-0.5 shadow-sm transition-all duration-200 hover:bg-white md:p-1"
 							aria-label="Previous image"
 						>
-							<svg class="w-2 h-2 md:w-3 md:h-3 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+							<svg
+								class="h-2 w-2 text-gray-700 md:h-3 md:w-3"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M15 19l-7-7 7-7"
+								></path>
 							</svg>
 						</button>
-						
+
 						<!-- Dots Indicator -->
 						<div class="flex gap-0.5 md:gap-1">
 							{#each carouselImages as _, index}
-								<button 
-									on:click={() => currentImageIndex = index}
-									class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-200 {currentImageIndex === index ? 'bg-gray-700' : 'bg-gray-300'}"
+								<button
+									on:click={() => (currentImageIndex = index)}
+									class="h-1.5 w-1.5 rounded-full transition-all duration-200 md:h-2 md:w-2 {currentImageIndex ===
+									index
+										? 'bg-gray-700'
+										: 'bg-gray-300'}"
 									aria-label="Go to image {index + 1}"
 								></button>
 							{/each}
 						</div>
-						
-						<button 
+
+						<button
 							on:click={nextImage}
-							class="p-0.5 md:p-1 rounded-full bg-white/80 hover:bg-white shadow-sm transition-all duration-200"
+							class="rounded-full bg-white/80 p-0.5 shadow-sm transition-all duration-200 hover:bg-white md:p-1"
 							aria-label="Next image"
 						>
-							<svg class="w-2 h-2 md:w-3 md:h-3 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							<svg
+								class="h-2 w-2 text-gray-700 md:h-3 md:w-3"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5l7 7-7 7"
+								></path>
 							</svg>
 						</button>
 					</div>
 					<!-- Carousel Message -->
-					<p class="text-[8px] italic md:text-[14px] xl:text-[20px] leading-3 md:leading-4 lg:leading-6 decoration-1 text-center tracking-tight">
+					<p
+						class="text-center text-[8px] leading-3 tracking-tight italic decoration-1 md:text-[14px] md:leading-4 lg:leading-6 xl:text-[20px]"
+					>
 						Join us for an epic road trip through UF with innovation and nature
 					</p>
-                    
 				</div>
 				<!-- Background images -->
 				<img
 					src={PostcardSticker}
 					alt="Postcard Sticker"
-					class="absolute -top-8 -right-6 w-15 md:w-20 xl:w-40 h-auto"
+					class="absolute -top-2 -right-2 md:-top-8 md:-right-6 h-auto w-15 md:w-20 xl:w-40"
 				/>
-                <img
+				<img
 					src={Squiggly}
 					alt="Squiggly"
-					class="absolute z-2 bottom-5 left-10 w-50 h-auto opacity-90 -rotate-2"
+					class="absolute bottom-5 left-10 z-2 h-auto w-30 md:w-50 -rotate-2 opacity-90"
 				/>
-                <img
+				<img
 					src={Airmail}
 					alt="Airmail"
-					class="absolute bottom-2 z-3 left-2 w-15 md:w-20 xl:w-34 h-auto -rotate-5 opacity-90"
+					class="absolute bottom-2 left-2 z-3 h-auto w-15 -rotate-5 opacity-90 md:w-20 xl:w-34"
 				/>
 			</div>
 		</div>
+	</div>
+
+	<div
+		class="mt-6 md:mt-12 w-full px-4 font-montserrat text-base leading-relaxed font-medium text-[#F7F2E9] md:max-w-1/2 md:px-0 md:text-lg lg:text-xl"
+	>
+		<p class="mb-4">
+			SwampHacks is the University of Florida’s flagship hackathon, bringing together <span class="font-bold">300+</span> students
+			each year for 36 hours of creativity, collaboration, and innovation.
+		</p>
+		<p class="mb-4">
+			Recognized for excellence by <span class="font-bold">UF’s Herbert Wertheim College of Engineering</span>, SwampHacks offers
+			hands-on workshops, mentorship, and community-building activities that help hackers grow their
+			skills and bring their ideas to life.
+		</p>
+		<p>
+			Whether you’re a first-time hacker or a seasoned coder, SwampHacks is the place to build,
+			connect, and inspire.
+		</p>
 	</div>
 </div>
 

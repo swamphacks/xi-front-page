@@ -3,6 +3,7 @@
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
 	import About from '$lib/components/About.svelte';
+	import Tracks from '$lib/components/Tracks/Tracks.svelte';
 </script>
 
 <main>
@@ -10,21 +11,21 @@
 	<div
 		class="relative min-h-[200vh] w-full overflow-hidden bg-grass-background sm:min-h-[250vh] lg:min-h-[200vh] xl:min-h-[200vh]"
 	>
-		<Road />
+		<div class="hidden lg:block">
+			<Road />
+		</div>
 
 		<!-- Content 1 (About Us)-->
-		<div></div>
+		<div class="h-1/3">
+			<About />
+		</div>
 
 		<!-- Content 2 (Tracks)-->
-		<div></div>
+		<Tracks />
 
 		<!-- Content goes here -->
-		
+
 		<!-- About -->
-		 <div class="h-1/3">
-			<About />
-			
-		 </div>
 		<!-- <About /> -->
 	</div>
 
