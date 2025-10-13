@@ -2,6 +2,7 @@
 	import BreakpointIndicator from '$lib/components/BreakpointIndicator.svelte';
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
+	import About from '$lib/components/About.svelte';
 </script>
 
 <main>
@@ -17,8 +18,14 @@
 		<!-- Content 2 (Tracks)-->
 		<div></div>
 
-		<!-- Content 3 (FAQs)-->
-		<div></div>
+		<!-- Content goes here -->
+		
+		<!-- About -->
+		 <div class="h-1/3">
+			<About />
+			
+		 </div>
+		<!-- <About /> -->
 	</div>
 
 	<div class="flex w-full flex-col items-center justify-center gap-8 bg-grass-background py-16">
