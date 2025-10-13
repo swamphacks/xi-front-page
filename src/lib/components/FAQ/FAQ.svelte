@@ -129,7 +129,7 @@
     ];
 </script>
 
-<div class="flex w-full flex-col items-center justify-center bg-grass-background">
+<div class="flex w-full flex-col items-center justify-center bg-grass-background pb-24">
     <h2 class="font-beachday text-5xl text-white flex ">FAQ</h2>
     <p class="text-md font-beachday text-neutral-200">(Click on each landmark to see more)</p>
     <div class="relative w-auto flex justify-center items-center bg-grass-background py-10 px-20">
