@@ -5,6 +5,7 @@
 	import FAQ from '$lib/components/FAQ/FAQ.svelte';
 	import About from '$lib/components/About.svelte';
 	import Tracks from '$lib/components/Tracks/Tracks.svelte';
+	import Clubs from '$lib/components/Clubs.svelte';
 </script>
 
 <main>
@@ -21,7 +22,7 @@
 		</div>
 
 		<!-- Content 1 (About Us)-->
-		<div class="h-1/3">
+		<div class="h-1/2">
 			<About />
 		</div>
 
@@ -48,6 +49,11 @@
 			<h4 class="font-beachday text-2xl">To be announced!</h4>
 		</div>
 	</div>
+	 <!-- Clubs -->
+	 <div class="h-1/3 bg-grass-background flex items-start justify-center overflow-hidden">
+        <Clubs />
+    </div>
+    <!-- <Clubs /> -->
 </main>
 
 <BreakpointIndicator />
