@@ -15,6 +15,9 @@
     import UFSIT from "$lib/assets/student-org-logos/UFSIT.svg"
     import UNLITTER from "$lib/assets/student-org-logos/UNLITTER.svg"
     import Wicse from "$lib/assets/student-org-logos/Wicse.svg"
+    import OSC from "$lib/assets/student-org-logos/OSC.svg"
+    import SHPE from "$lib/assets/student-org-logos/SHPE.svg"
+    import WingHacks from "$lib/assets/student-org-logos/WingHacks.svg"
 </script>
 
 <section class="flex size-full justify-center">
@@ -28,36 +31,36 @@
             
             <!-- Student organization logos positioned around the bathouse with varied spacing -->
             <!-- Top row organizations - much higher up -->
-            <div class="absolute -top-32 right-40 md:-left-40 md:top-10 group cursor-pointer z-20 hover:rotate-2">
+            <div class="absolute -top-30 right-50 md:right-10 md:-top-5 group cursor-pointer z-20 hover:rotate-2">
                 <a href="https://ufcskickstart.com/" target="_blank" rel="noopener noreferrer" aria-label="CSK" class="block relative">
-                    <img src={CSK} alt="CSK" class="w-40 md:w-[260px] opacity-90 transform -rotate-12 hover:opacity-100 transition-opacity turn-left">
-                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-10 mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={CSK} alt="CSK" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity turn-left">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-35 mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         CSK
                     </div>
                 </a>
             </div>
             
-            <div class="absolute -top-45 -left-2 md:left-40 md:top-0 group cursor-pointer z-20 hover:rotate-2 turn-right">
+            <div class="absolute -top-20 -left-2 md:left-40 md:top-0 group cursor-pointer z-20 hover:rotate-2 turn-right">
                 <a href="https://ufcsu.org/" target="_blank" rel="noopener noreferrer" aria-label="CSU" class="block relative">
-                    <img src={CSU} alt="CSU" class="w-40 md:w-[260px] opacity-90 transform rotate-6 hover:opacity-100 transition-opacity">
-                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={CSU} alt="CSU" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
+                    <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-5 mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         CSU
                     </div>
                 </a>
             </div>
             
-            <div class="absolute -top-48 right-4 md:-right-60 md:top-80 group cursor-pointer z-20 hover:rotate-2 turn-left">
+            <div class="absolute -top-30 right-30 md:-right-40 md:top-120 group cursor-pointer z-20 hover:rotate-2 turn-left">
                 <a href="https://www.ufdsi.com/" target="_blank" rel="noopener noreferrer" aria-label="DSI" class="block relative">
-                    <img src={DSI} alt="DSI" class="w-40 md:w-[300px] opacity-90 transform -rotate-6 hover:opacity-100 transition-opacity">
+                    <img src={DSI} alt="DSI" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
                     <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-30 mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         DSI
                     </div>
                 </a>
             </div>
             
-            <div class="absolute -top-25 -right-3 md:right-140 md:top-40 group cursor-pointer z-20 hover:rotate-2 turn-right">
+            <div class="absolute -top-25 -right-3 md:right-200 md:top-40 group cursor-pointer z-20 hover:rotate-2 turn-right">
                 <a href="https://www.gatorfes.org/" target="_blank" rel="noopener noreferrer" aria-label="FES" class="block relative">
-                    <img src={FES} alt="FES" class="w-40 md:w-[260px] opacity-90 transform rotate-12 hover:opacity-100 transition-opacity">
+                    <img src={FES} alt="FES" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
                     <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 translate-y-8 mb-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         FES
                     </div>
@@ -65,38 +68,38 @@
             </div>
             
             <!-- Left side organizations - more spread out vertically -->
-            <div class="absolute -top-10 -left-5 md:-left-50 md:top-50 group cursor-pointer z-20 hover:rotate-2 turn-left">
+            <div class="absolute -top-0 left-5 md:-left-50 md:top-50 group cursor-pointer z-20 hover:rotate-2 turn-left">
                 <a href="https://www.instagram.com/gator_battlebots" target="_blank" rel="noopener noreferrer" aria-label="Gator Robotics" class="block relative">
-                    <img src={GatorRobotics} alt="Gator Robotics" class="w-45 md:w-[320px] opacity-90 transform rotate-20 hover:opacity-100 transition-opacity">
-                    <div class="absolute top-1/2 transform translate-x-1/2 -translate-y-12 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={GatorRobotics} alt="Gator Robotics" class="w-[65px] md:w-[150px] opacity-90 transform -rotate-40 hover:opacity-100 transition-opacity">
+                    <div class="absolute top-1/2 transform -translate-x-5 -translate-y-18 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         Gator Robotics
                     </div>
                 </a>
             </div>
             
-            <div class="absolute top-16 -left-5 md:left-96 md:top-20 group cursor-pointer z-20 hover:rotate-2 turn-right">
+            <div class="absolute -top-20 left-20 md:left-96 md:top-0 group cursor-pointer z-20 hover:rotate-2 turn-right">
                 <a href="https://ieee.ece.ufl.edu/" target="_blank" rel="noopener noreferrer" aria-label="IEEE" class="block relative">
-                    <img src={IEEE} alt="IEEE" class="w-40 md:w-[260px] opacity-90 transform rotate-10 hover:opacity-100 transition-opacity">
-                    <div class="absolute top-1/2 transform translate-x-20 -translate-y-14 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={IEEE} alt="IEEE" class="w-[65px] md:w-[150px] opacity-90 transform rotate-10 hover:opacity-100 transition-opacity">
+                    <div class="absolute top-1/2 transform translate-x-5 -translate-y-20 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         IEEE
                     </div>
                 </a>
             </div>
             
             
-            <div class="absolute -bottom-10 left-20 md:left-20 md:bottom-30 group cursor-pointer z-20 hover:rotate-2 turn-right">
+            <div class="absolute -top-20 right-10 md:right-40 md:top-10 group cursor-pointer z-20 hover:rotate-2 turn-right">
                 <a href="https://ufsec.org/" target="_blank" rel="noopener noreferrer" aria-label="SEC" class="block relative">
-                    <img src={SEC} alt="SEC" class="w-40 md:w-[260px] opacity-90 transform rotate-20 hover:opacity-100 transition-opacity">
-                    <div class="absolute transform translate-x-35 -translate-y-40 mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={SEC} alt="SEC" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
+                    <div class="absolute transform translate-x-5 -translate-y-35 mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         SEC
                     </div>
                 </a>
             </div>
             
             <!-- Right side organizations - more spread out vertically -->
-            <div class="absolute -bottom-42 right-0 md:-right-50 md:bottom-180 group cursor-pointer z-20 hover:rotate-2 turn-left">
+            <div class="absolute -bottom-10 right-0 md:-right-40 md:bottom-140 group cursor-pointer z-20 hover:rotate-2 turn-left">
                 <a href="https://www.spcbatuf.org/" target="_blank" rel="noopener noreferrer" aria-label="SPCB" class="block relative">
-                    <img src={SPCB} alt="SPCB" class="w-40 md:w-[300px] opacity-90 transform -rotate-25 hover:opacity-100 transition-opacity">
+                    <img src={SPCB} alt="SPCB" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
                     <div class="absolute top-1/2 transform translate-x-10 -translate-y-20 ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         SPCB
                     </div>
@@ -105,25 +108,25 @@
             
             <div class="absolute top-10 -right-2 md:right-8 md:top-40 group cursor-pointer z-20 hover:rotate-2 turn-right">
                 <a href="https://www.swamplaunch.org/" target="_blank" rel="noopener noreferrer" aria-label="Swamplaunch" class="block relative">
-                    <img src={Swamplaunch} alt="Swamplaunch" class="w-40 md:w-[260px] opacity-90 transform hover:opacity-100 transition-opacity">
-                    <div class="absolute top-1/2 transform -translate-y-12 ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={Swamplaunch} alt="Swamplaunch" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
+                    <div class="absolute top-1/2 transform -translate-x-10 -translate-y-15 ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         Swamplaunch
                     </div>
                 </a>
             </div>
             
-            <div class="absolute top-44 right-2 md:right-16 md:top-90 group cursor-pointer z-20 hover:rotate-2 turn-left">
+            <div class="absolute top-44 right-2 md:right-0 md:top-90 group cursor-pointer z-20 hover:rotate-2 turn-left">
                 <a href="https://linktr.ee/ufengineeringambassadors/" target="_blank" rel="noopener noreferrer" aria-label="UF Engineering Ambassadors" class="block relative">
-                    <img src={UFEngAmbassadors} alt="UF Engineering Ambassadors" class="w-40 md:w-[260px] opacity-90 transform -rotate-30 hover:opacity-100 transition-opacity">
-                    <div class="absolute top-1/2 transform -translate-y-12 -translate-x-10 ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={UFEngAmbassadors} alt="UF Engineering Ambassadors" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
+                    <div class="absolute top-1/2 transform -translate-y-12 -translate-x-25 ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         UF Engineering Ambassadors
                     </div>
                 </a>
             </div>
             
-            <div class="absolute top-68 right-5 md:-right-10 md:top-130 group cursor-pointer z-20 hover:rotate-2 turn-right">
+            <div class="absolute bottom-60 right-20 md:right-5 md:bottom-50 group cursor-pointer z-20 hover:rotate-2 turn-right">
                 <a href="https://linktree.com/floridapuppyclub/" target="_blank" rel="noopener noreferrer" aria-label="UF Puppy Club" class="block relative">
-                    <img src={UFPuppyClub} alt="UF Puppy Club" class="w-40 md:w-[260px] opacity-90 transform hover:opacity-100 transition-opacity">
+                    <img src={UFPuppyClub} alt="UF Puppy Club" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
                     <div class="absolute top-1/2 transform -translate-y-12 ml-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         UF Puppy Club
                     </div>
@@ -131,38 +134,62 @@
             </div>
             
             <!-- Bottom organizations - much lower down -->
-            <div class="absolute -bottom-28 -left-5 md:-left-40 md:bottom-100 group cursor-pointer z-20 hover:rotate-2 turn-left">
+            <div class="absolute -bottom-10 left-5 md:-left-40 md:bottom-100 group cursor-pointer z-20 hover:rotate-2 turn-left">
                 <a href="https://ufsit.club/" target="_blank" rel="noopener noreferrer" aria-label="UFSIT" class="block relative">
-                    <img src={UFSIT} alt="UFSIT" class="w-40 md:w-[260px] opacity-90 transform rotate-12 hover:opacity-100 transition-opacity">
+                    <img src={UFSIT} alt="UFSIT" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
                     <div class="absolute top-full left-1/2 transform -translate-y-40 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         UFSIT
                     </div>
                 </a>
             </div>
 
-            <div class="absolute bottom-5 -left-5 md:-left-40 md:bottom-50 group cursor-pointer z-20 hover:rotate-2 turn-left">
+            <div class="absolute bottom-20 left-0 md:-left-40 md:bottom-50 group cursor-pointer z-20 hover:rotate-2 turn-left">
                 <a href="https://ufsase.com/" target="_blank" rel="noopener noreferrer" aria-label="UFSIT" class="block relative">
-                    <img src={SASE} alt="SASE" class="w-40 md:w-[260px] opacity-90 transform hover:opacity-100 transition-opacity">
+                    <img src={SASE} alt="SASE" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
                     <div class="absolute top-full left-1/2 transform -translate-y-40 -translate-x-1/2 mt-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         SASE
                     </div>
                 </a>
             </div>
             
-            <div class="absolute -bottom-38 right-30 md:right-50 md:bottom-40 group cursor-pointer z-20 hover:rotate-2 turn-right">
+            <div class="absolute -bottom-20 left-20 md:left-20 md:bottom-40 group cursor-pointer z-20 hover:rotate-2 turn-right">
                 <a href="https://www.unlitter.org/uf" target="_blank" rel="noopener noreferrer" aria-label="UNLITTER" class="block relative">
-                    <img src={UNLITTER} alt="UNLITTER" class="w-40 md:w-[260px] opacity-90 transform -rotate-6 hover:opacity-100 transition-opacity">
-                    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-45 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={UNLITTER} alt="UNLITTER" class="w-[65px] md:w-[150px] opacity-90 transform hover:opacity-100 transition-opacity">
+                    <div class="absolute transform -translate-x-0 -translate-y-30 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         UNLITTER
                     </div>
                 </a>
             </div>
             
-            <div class="absolute -bottom-60 left-24 md:left-32 md:bottom-70 group cursor-pointer z-20 hover:rotate-2 turn-left">
+            <div class="absolute top-60 right-20 md:right-50 md:top-170 group cursor-pointer z-20 hover:rotate-2 turn-left">
                 <a href="https://ufwicse.com/" target="_blank" rel="noopener noreferrer" aria-label="WICSE" class="block relative">
-                    <img src={Wicse} alt="WICSE" class="w-50 md:w-[320px] opacity-90 transform rotate-30 hover:opacity-100 transition-opacity">
-                    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-45 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                    <img src={Wicse} alt="WICSE" class="w-[65px] md:w-[150px] opacity-90 hover:opacity-100 transition-opacity">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-30 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                         WICSE
+                    </div>
+                </a>
+            </div>
+            <div class="absolute -bottom-10 left-50 md:left-80 md:bottom-40 group cursor-pointer z-20 hover:rotate-2 turn-left">
+                <a href="https://ufosc.org/" target="_blank" rel="noopener noreferrer" aria-label="WICSE" class="block relative">
+                    <img src={OSC} alt="OSC" class="w-[65px] md:w-[150px] opacity-90 hover:opacity-100 transition-opacity">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-30 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        OSC
+                    </div>
+                </a>
+            </div>
+            <div class="absolute bottom-5 left-20 md:-left-10 md:bottom-90 group cursor-pointer z-20 hover:rotate-2 turn-left">
+                <a href="https://www.shpeuf.com/" target="_blank" rel="noopener noreferrer" aria-label="WICSE" class="block relative">
+                    <img src={SHPE} alt="SHPE" class="w-[65px] md:w-[150px] opacity-90 hover:opacity-100 transition-opacity">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-30 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        SHPE
+                    </div>
+                </a>
+            </div>
+            <div class="absolute -top-5 right-40 md:-right-40 md:top-5 group cursor-pointer z-20 hover:rotate-2 turn-left">
+                <a href="https://www.winghacks.com/" target="_blank" rel="noopener noreferrer" aria-label="WICSE" class="block relative">
+                    <img src={WingHacks} alt="SHPE" class="w-[65px] md:w-[150px] opacity-90 hover:opacity-100 transition-opacity">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-30 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                        WingHacks
                     </div>
                 </a>
             </div>
