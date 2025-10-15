@@ -264,7 +264,7 @@
 			transform: translateY(0px);
 		}
 		50% {
-			transform: translateY(-2.5px);
+			transform: translateY(-5px);
 		}
 	}
 
