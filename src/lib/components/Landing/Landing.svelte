@@ -36,13 +36,17 @@
 			<Link
 				href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application"
 			>
-				<Button className="text-md text-xl 2xl:text-3xl w-full">Register to Hack</Button>
+				<Button className="font-beachday text-md text-xl 2xl:text-3xl w-full"
+					>Register to Hack</Button
+				>
 			</Link>
 
 			<Link
 				href="https://docs.google.com/forms/d/1CXXY-PgU43g_edHMLboSsQl7Cb45lIH0aX8ptTiG23g/viewform?edit_requested=true"
 			>
-				<Button className="text-md text-xl 2xl:text-3xl w-full">Register to Mentor</Button>
+				<Button className="font-beachday text-md text-xl 2xl:text-3xl w-full"
+					>Register to Mentor</Button
+				>
 			</Link>
 		</div>
 	</div>

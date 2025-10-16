@@ -23,31 +23,31 @@
 		},
 		{
 			src: Track2,
-			alt: 'AI/ML Track',
-			title: 'AI/ML Track',
+			alt: 'Education, Accessibility & Social Impact',
+			title: 'Education, Accessibility & Social Impact',
 			description:
-				'Projects that leverage artificial intelligence or machine learning to solve problems, create new experiences, or enhance existing technologies.'
+				'Build tech that makes a difference. Create solutions that empower communities, improve access, and shape a more inclusive world.'
 		},
 		{
 			src: Track3,
-			alt: 'Health Tech Track',
-			title: 'Health Tech Track',
+			alt: 'Sustainability',
+			title: 'Sustainability',
 			description:
-				'Innovative solutions aimed at improving healthcare delivery, patient outcomes, or medical research through technology.'
+				'Hack for a greener future. Design innovative tools and technologies that protect the planet and promote sustainable living.'
 		},
 		{
 			src: Track4,
-			alt: 'Sustainability Track',
-			title: 'Sustainability Track',
+			alt: 'Game Design',
+			title: 'Game Design',
 			description:
-				'Projects focused on environmental sustainability, renewable energy, conservation, or addressing climate change through technological innovation.'
+				'Bring your imagination to life! Develop immersive games that entertain, inspire, or tell a story only you can create.'
 		},
 		{
 			src: Track5,
-			alt: 'Social Impact Track',
-			title: 'Social Impact Track',
+			alt: 'The Design of Everyday Life (Human-Centered Design)',
+			title: 'The Design of Everyday Life (Human-Centered Design)',
 			description:
-				'Technological solutions designed to address social issues, improve community well-being, or promote equity and inclusion.'
+				'Design creative, user-focused solutions that enhance daily experiences and wellbeing.'
 		}
 	];
 	let current = 0;

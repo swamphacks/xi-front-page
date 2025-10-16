@@ -34,7 +34,7 @@
 	onclick={(e: any) => e.target === e.currentTarget && onClose()}
 >
 	<div
-		class="absolute m-3 max-h-screen w-auto overflow-hidden rounded-lg bg-white p-6 shadow-lg lg:max-w-xl"
+		class="absolute m-3 max-h-screen w-[90vw] max-w-2xl overflow-hidden rounded-lg bg-white p-6 shadow-lg lg:max-w-xl"
 	>
 		<h1 class="justify-center text-center text-xl font-bold">{title}</h1>
 		<button
