@@ -11,7 +11,7 @@
 
 <main>
 	<Landing />
-	<div class="relative h-[500vh] w-full bg-grass-background lg:h-[470vh]">
+	<div class="relative h-[490vh] w-full bg-grass-background lg:h-[430vh]">
 		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">
 			<Road />
 		</div>
