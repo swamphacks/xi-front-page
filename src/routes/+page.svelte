@@ -13,7 +13,7 @@
 
 <main>
 	<Landing />
-	<div class="relative h-[490vh] w-full bg-grass-background lg:h-[430vh]">
+	<div class="relative h-[500vh] w-full bg-grass-background lg:h-[430vh]">
 		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">
 			<Road />
 		</div>
@@ -41,35 +41,35 @@
 				<FAQ />
 			</div>
 			<!-- <FAQ /> -->
-		</div>
 
-		<div class="flex w-full flex-col items-center justify-center gap-8 bg-grass-background py-16">
-			<h3 class="font-beachday text-5xl text-white">Sponsors</h3>
-			<div
-				class="relative flex min-h-[120vh] w-full items-center justify-center bg-cover bg-center"
-				style="background-image: url({lakeSrc})"
-			>
-				<h4 class="font-beachday text-2xl">To be announced!</h4>
+			<div class="flex w-full flex-col items-center justify-center gap-8 bg-grass-background py-16">
+				<h3 class="font-beachday text-5xl text-white">Sponsors</h3>
+				<div
+					class="relative flex min-h-[120vh] w-full items-center justify-center bg-cover bg-center"
+					style="background-image: url({lakeSrc})"
+				>
+					<h4 class="font-beachday text-3xl">To be announced!</h4>
+				</div>
+			</div>
+
+			<Clubs />
+
+			<div class="my-32 flex flex-col items-center">
+				<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
+					Ready to hack?
+				</h3>
+				<Link
+					href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application"
+				>
+					<h3
+						class="font-outline mt-8 cursor-pointer font-beachday text-3xl text-end-button hover:text-button-hover active:text-button-active-text md:text-6xl lg:text-8xl 2xl:text-7xl"
+					>
+						Register Now
+					</h3>
+				</Link>
 			</div>
 		</div>
 	</div>
-	<!-- Clubs -->
-	<div class="flex h-[90vh] items-start justify-center overflow-hidden bg-grass-background">
-		<Clubs />
-	</div>
-	<div class="flex h-[30vh] w-full flex-col items-center justify-center bg-grass-background">
-		<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
-			Ready to hack?
-		</h3>
-		<Link href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application">
-			<h3
-				class="font-outline mt-8 cursor-pointer font-beachday text-3xl text-end-button hover:text-button-hover active:text-button-active-text md:text-6xl lg:text-8xl 2xl:text-7xl"
-			>
-				Register Now
-			</h3>
-		</Link>
-	</div>
-	<!-- <Clubs /> -->
 </main>
 
 <BreakpointIndicator />
