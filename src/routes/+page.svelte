@@ -11,7 +11,7 @@
 
 <main>
 	<Landing />
-	<div class="relative h-[400vh] w-full bg-grass-background">
+	<div class="relative h-[500vh] w-full bg-grass-background lg:h-[470vh]">
 		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">
 			<Road />
 		</div>
@@ -51,11 +51,11 @@
 			</div>
 		</div>
 	</div>
-	 <!-- Clubs -->
-	 <div class="h-1/3 bg-grass-background flex items-start justify-center overflow-hidden">
-        <Clubs />
-    </div>
-    <!-- <Clubs /> -->
+	<!-- Clubs -->
+	<div class="flex h-[100vh] items-start justify-center overflow-hidden bg-grass-background">
+		<Clubs />
+	</div>
+	<!-- <Clubs /> -->
 </main>
 
 <BreakpointIndicator />
