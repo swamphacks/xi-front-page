@@ -24,12 +24,27 @@ body.modal-open {
 	src: url("/fonts/beachday.regular.otf") format("opentype");
 }
 
+.font-outline {
+	paint-order: stroke fill;
+	-webkit-text-stroke: 10px oklch(0.4 0.09 38.2);
+}
+
 @theme {
 	--color-sky-background: #C7DEE0;
 	--color-grass-background: #7B9B5B;
-	--color-button-primary: #c9836d;
+	/* --color-button-primary: #c9836d; */
 
 	--font-montserrat: 'Montserrat', sans-serif;
 
 	--font-beachday: 'BeachDay', sans-serif;
+
+	--color-button: oklch(0.7 0.09 38.2);
+	--color-button-text: oklch(0.3 0.09 38.2);
+	--color-button-border: oklch(0.4 0.09 38.2);
+	--color-button-hover: oklch(0.8 0.09 38.2);
+	--color-button-active: oklch(0.35 0.09 38.2);
+	--color-button-active-text: oklch(0.2 0.09 38.2);
+	--color-button-active-border: oklch(0.35 0.09 38.2);
+
+	--color-end-button: oklch(0.7 0.12 38.2);
 }
