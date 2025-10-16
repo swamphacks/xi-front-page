@@ -51,8 +51,10 @@
 					<h4 class="font-beachday text-3xl">To be announced!</h4>
 				</div>
 			</div>
-
-			<Clubs />
+			<div class="h-[1000px]">
+				<Clubs />
+			</div>
+			
 
 			<div class="my-32 flex flex-col items-center">
 				<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
