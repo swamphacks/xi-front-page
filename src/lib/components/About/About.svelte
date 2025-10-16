@@ -2,7 +2,9 @@
 	import AboutTitle from '$lib/assets/about-us-title.svg';
 	import UFArch from '$lib/assets/uf-arch-building.svg';
 	import PostcardSticker from '$lib/assets/sh-postcard-sticker.png';
-	import SHPlaceholder from '$lib/assets/sh-placeholder-1.png';
+	import SHPlaceholder1 from '$lib/assets/sh-placeholder-1.jpg';
+	import SHPlaceholder2 from '$lib/assets/sh-placeholder-2.jpg';
+	import SHPlaceholder3 from '$lib/assets/sh-placeholder-3.jpg';
 	import Squiggly from '$lib/assets/squiggly.svg';
 	import Airmail from '$lib/assets/air-mail.svg';
 	import UFArchesTitle from '$lib/assets/uf-arches-title.svg';
@@ -12,15 +14,15 @@
 	// Image carousel data
 	const carouselImages = [
 		{
-			src: SHPlaceholder,
+			src: SHPlaceholder1,
 			alt: 'Placeholder'
 		},
 		{
-			src: SHPlaceholder,
+			src: SHPlaceholder2,
 			alt: 'Placeholder'
 		},
 		{
-			src: SHPlaceholder,
+			src: SHPlaceholder3,
 			alt: 'Placeholder'
 		}
 	];
