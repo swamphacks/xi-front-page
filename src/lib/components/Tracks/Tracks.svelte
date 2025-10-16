@@ -138,7 +138,7 @@
 
 	<div class="flex w-full flex-col items-center justify-center">
 		<div
-			class="flex flex-col items-center justify-center gap-4 rounded-2xl border-8 border-amber-200 bg-amber-100 p-4 text-black transition-all duration-300"
+			class="m-4 flex flex-col items-center justify-center gap-4 rounded-2xl border-8 border-amber-200 bg-amber-100 p-4 text-black transition-all duration-300 lg:m-0"
 		>
 			<h3 class="text-center font-beachday text-3xl">{tracks[current].title}</h3>
 			<p class="max-w-xl text-center font-montserrat text-lg">{tracks[current].description}</p>
