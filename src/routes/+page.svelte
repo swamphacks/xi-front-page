@@ -5,6 +5,7 @@
 	import FAQ from '$lib/components/FAQ/FAQ.svelte';
 	import About from '$lib/components/About/About.svelte';
 	import Tracks from '$lib/components/Tracks/Tracks.svelte';
+	import Clubs from '$lib/components/Clubs.svelte';
 	import lakeSrc from '$lib/assets/Lake.png';
 </script>
 
@@ -50,6 +51,11 @@
 			</div>
 		</div>
 	</div>
+	 <!-- Clubs -->
+	 <div class="h-1/3 bg-grass-background flex items-start justify-center overflow-hidden">
+        <Clubs />
+    </div>
+    <!-- <Clubs /> -->
 </main>
 
 <BreakpointIndicator />
