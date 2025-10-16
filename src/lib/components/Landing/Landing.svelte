@@ -24,7 +24,9 @@
 	>
 		<div class="z-100 flex flex-col items-center justify-center gap-2">
 			<h1 class="font-beachday text-5xl md:text-6xl lg:text-8xl 2xl:text-9xl">SwampHacks XI</h1>
-			<h2 class="font-beachday text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl">January 23rd - 25th</h2>
+			<h2 class="font-beachday text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl">
+				January 23rd - 25th
+			</h2>
 			<h3 class="font-beachday text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl">Turlington Hall</h3>
 		</div>
 
