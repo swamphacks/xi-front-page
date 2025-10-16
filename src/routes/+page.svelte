@@ -3,7 +3,7 @@
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
 	import FAQ from '$lib/components/FAQ/FAQ.svelte';
-	import About from '$lib/components/About.svelte';
+	import About from '$lib/components/About/About.svelte';
 	import Tracks from '$lib/components/Tracks/Tracks.svelte';
 	import lakeSrc from '$lib/assets/Lake.png';
 </script>
