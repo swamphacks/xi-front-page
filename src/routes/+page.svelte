@@ -63,7 +63,7 @@
 		</h3>
 		<Link href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application">
 			<h3
-				class="text-1xl font-outline mt-8 cursor-pointer font-beachday text-end-button hover:text-button-hover active:text-button-active-text md:text-6xl lg:text-8xl 2xl:text-7xl"
+				class="font-outline mt-8 cursor-pointer font-beachday text-3xl text-end-button hover:text-button-hover active:text-button-active-text md:text-6xl lg:text-8xl 2xl:text-7xl"
 			>
 				Register Now
 			</h3>
