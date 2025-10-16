@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from '../Button.svelte';
-	import Link from '../Link.svelte';
+	import Button from '../Button/Button.svelte';
+	import Link from '../Link/Link.svelte';
 	import BushWall from './BushWall.svelte';
 	import CenturyTower from './CenturyTower.svelte';
 	import MovingCloud from './MovingCloud.svelte';
@@ -25,21 +25,22 @@
 		<div class="z-100 flex flex-col items-center justify-center gap-2">
 			<h1 class="font-beachday text-5xl md:text-6xl lg:text-8xl">SwampHacks XI</h1>
 			<h2 class="font-beachday text-3xl md:text-4xl lg:text-5xl">January 23rd - 25th</h2>
-			<h3 class="font-beachday text-2xl md:text-3xl lg:text-4xl">Newell Hall</h3>
+			<h3 class="font-beachday text-2xl md:text-3xl lg:text-4xl">Turlington Hall</h3>
 		</div>
 
 		<!-- Button -->
-		<div class="z-100 flex w-full flex-col items-center justify-center gap-4">
+
+		<div class="z-100 flex w-auto flex-col items-stretch justify-center gap-3">
 			<Link
 				href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application"
 			>
-				<Button className="w-full">Register to Hack</Button>
+				<Button className="text-md sm:text-xl 2xl:text-3xl w-full">Register to Hack</Button>
 			</Link>
 
 			<Link
-				href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/mentor-application"
+				href="https://docs.google.com/forms/d/1CXXY-PgU43g_edHMLboSsQl7Cb45lIH0aX8ptTiG23g/viewform?edit_requested=true"
 			>
-				<Button className="w-full">Register to Mentor</Button>
+				<Button className="text-md sm:text-xl 2xl:text-3xl w-full">Register to Mentor</Button>
 			</Link>
 		</div>
 	</div>
