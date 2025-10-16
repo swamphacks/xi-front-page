@@ -66,7 +66,7 @@
 <div class="relative inline-block">
 	<!-- Clapper (behind) -->
 	<div
-		bind:this={clapper}
+		bind:this="{clapper}"
 		class="absolute top-[198px] left-[51%] z-0 h-auto w-[10px] [&_svg]:block [&_svg]:h-auto [&_svg]:w-full"
 	>
 		{@html Clapper}
@@ -74,12 +74,28 @@
 
 	<!-- Bell (middle, clickable) -->
 	<button
-		bind:this={bell}
-		on:click={ring}
+		bind:this="{bell}"
+		on:click="{ring}"
 		class="absolute top-[7%] left-[38%] z-10 h-auto w-[92px] cursor-pointer [&_svg]:block [&_svg]:h-auto [&_svg]:w-full"
 	>
 		{@html Bell}
 	</button>
+
+	<!-- MLH banner -->
+	<div
+		class="absolute top-[21.3%] left-[34%] z-30 h-auto w-[200px] cursor-pointer [&_svg]:block [&_svg]:h-auto [&_svg]:w-full"
+	>
+		<a
+			id="mlh-trust-badge"
+			style="display: block; max-width: 300px; min-width: 120px; width: 10%; z-index: 10000"
+			href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2026-season&utm_content=white"
+			target="_blank"
+			><img
+				src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-white.svg"
+				alt="Major League Hacking 2026 Hackathon Season"
+				style="width: 100%"
+		/></a>
+	</div>
 
 	<!-- Tower (front) -->
 	<div
