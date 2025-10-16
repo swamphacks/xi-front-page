@@ -7,6 +7,8 @@
 	import Tracks from '$lib/components/Tracks/Tracks.svelte';
 	import Clubs from '$lib/components/Clubs.svelte';
 	import lakeSrc from '$lib/assets/Lake.png';
+	import Link from '$lib/components/Link/Link.svelte';
+	import Button from '$lib/components/Button/Button.svelte';
 </script>
 
 <main>
@@ -52,8 +54,20 @@
 		</div>
 	</div>
 	<!-- Clubs -->
-	<div class="flex h-[100vh] items-start justify-center overflow-hidden bg-grass-background">
+	<div class="flex h-[90vh] items-start justify-center overflow-hidden bg-grass-background">
 		<Clubs />
+	</div>
+	<div class="flex h-[30vh] w-full flex-col items-center justify-center bg-grass-background">
+		<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
+			Ready to hack?
+		</h3>
+		<Link href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application">
+			<h3
+				class="text-1xl mt-8 cursor-pointer font-beachday text-button hover:text-button-hover active:text-button-active-text md:text-6xl lg:text-8xl 2xl:text-7xl"
+			>
+				Register Now
+			</h3>
+		</Link>
 	</div>
 	<!-- <Clubs /> -->
 </main>
