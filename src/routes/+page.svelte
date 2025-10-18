@@ -9,6 +9,7 @@
 	import lakeSrc from '$lib/assets/Lake.png';
 	import Link from '$lib/components/Link/Link.svelte';
 	import Button from '$lib/components/Button/Button.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <main class="overflow-x-hidden">
@@ -51,12 +52,11 @@
 					<h4 class="font-beachday text-3xl">To be announced!</h4>
 				</div>
 			</div>
-			<div class="h-[1000px]">
+			<div class="h-[1200px]">
 				<Clubs />
 			</div>
-			
 
-			<div class="my-32 flex flex-col items-center">
+			<!-- <div class="mt-32 flex flex-col items-center bg-red-500">
 				<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
 					Ready to hack?
 				</h3>
@@ -69,6 +69,11 @@
 						Register Now
 					</h3>
 				</Link>
+			</div> -->
+			<div class="bg-blue-100"><Footer /></div>
+			<div class="flex justify-center gap-4 items-center p-4 bg-black w-full text-center">
+				<p class="text-[10px] font-beachday text-white md:text-lg">Made with ❤️ by the Swamphacks Team</p>
+				<p class="text-[8px] md:text-md text-white">© 2025</p>
 			</div>
 		</div>
 	</div>
