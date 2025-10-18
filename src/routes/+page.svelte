@@ -7,6 +7,19 @@
 	import Clubs from '$lib/components/Clubs.svelte';
 	import lakeSrc from '$lib/assets/Lake.png';
 	import Link from '$lib/components/Link/Link.svelte';
+	import { onMount } from 'svelte';
+
+	let isMobile = false;
+
+	const checkMobile = () => {
+		isMobile = window.innerWidth < 1024;
+	};
+
+	onMount(() => {
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+		return () => window.removeEventListener('resize', checkMobile);
+	});
 </script>
 
 <main class="w-screen overflow-x-hidden">
@@ -15,9 +28,9 @@
 		<div
 			class="relative min-h-[200vh] w-full overflow-hidden bg-grass-background sm:min-h-[250vh] lg:min-h-[200vh] xl:min-h-[200vh]"
 		>
-			<div class="hidden lg:block">
+			{#if !isMobile}
 				<Road />
-			</div>
+			{/if}
 
 			<!-- Content 1 (About Us)-->
 			<div class="h-1/3">
@@ -43,7 +56,6 @@
 			<div class="h-[1000px]">
 				<Clubs />
 			</div>
-			
 
 			<div class="my-32 flex flex-col items-center">
 				<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
