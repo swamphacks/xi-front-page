@@ -53,7 +53,6 @@
 		masterTimeline.to(
 			cloudEl,
 			{
-				// (A) Move
 				x: window.innerWidth + cloudWidth,
 				duration,
 				ease: 'linear'
@@ -64,7 +63,6 @@
 		masterTimeline.to(
 			cloudEl,
 			{
-				// (B) Fade-in
 				opacity: 1,
 				duration: 3
 			},
