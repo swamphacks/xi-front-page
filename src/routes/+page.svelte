@@ -1,5 +1,4 @@
 <script>
-	import BreakpointIndicator from '$lib/components/BreakpointIndicator.svelte';
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
 	import FAQ from '$lib/components/FAQ/FAQ.svelte';
@@ -8,15 +7,11 @@
 	import Clubs from '$lib/components/Clubs.svelte';
 	import lakeSrc from '$lib/assets/Lake.png';
 	import Link from '$lib/components/Link/Link.svelte';
-	import Button from '$lib/components/Button/Button.svelte';
 </script>
 
 <main class="w-screen overflow-x-hidden">
 	<Landing />
-	<div class="relative h-[500vh] w-full bg-grass-background lg:h-[430vh]">
-		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">
-			<Road />
-		</div>
+	<div class="relative min-h-[500vh] w-full bg-grass-background lg:min-h-[430vh]">
 		<div
 			class="relative min-h-[200vh] w-full overflow-hidden bg-grass-background sm:min-h-[250vh] lg:min-h-[200vh] xl:min-h-[200vh]"
 		>
@@ -28,15 +23,9 @@
 			<div class="h-1/3">
 				<About />
 			</div>
-
-			<!-- Content 2 (Tracks)-->
-			<Tracks />
-
-			<!-- Content goes here -->
-
-			<!-- About -->
-			<!-- <About /> -->
-			<!-- FAQ -->
+			<div>
+				<Tracks />
+			</div>
 			<div class="h-1/3">
 				<FAQ />
 			</div>
