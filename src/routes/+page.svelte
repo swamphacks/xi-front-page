@@ -23,7 +23,7 @@
 </script>
 
 <main class="w-screen overflow-x-hidden">
-	<Landing />
+	<!-- <Landing /> -->
 	<div class="relative min-h-[500vh] w-full bg-grass-background lg:min-h-[430vh]">
 		<div
 			class="relative min-h-[200vh] w-full overflow-hidden bg-grass-background sm:min-h-[250vh] lg:min-h-[200vh] xl:min-h-[200vh]"
