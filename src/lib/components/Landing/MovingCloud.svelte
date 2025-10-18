@@ -22,60 +22,77 @@
 
 	const randomScale = () =>
 		isMobile ? Math.random() * (0.05 - 0.02) + 0.02 : Math.random() * (0.08 - 0.06) + 0.06;
-
-	// Helper to return a promise when tween completes
-	const tween = (target: any, vars: gsap.TweenVars) =>
-		new Promise<void>((resolve) => gsap.to(target, { ...vars, onComplete: resolve }));
-
 	onMount(async () => {
 		if (!cloudEl) return;
 
 		const cloudWidth = cloudEl.offsetWidth;
-
-		// ----- First animation (spawn somewhere on screen) -----
 		const startScale = randomScale();
-		const startX = Math.random() * (window.innerWidth - cloudWidth * startScale);
-		const startY = randomY();
+
+		if (isMobile) {
+			gsap.set(cloudEl, {
+				x: Math.random() * (window.innerWidth - cloudWidth * startScale),
+				y: randomY(),
+				scale: startScale,
+				opacity: 1,
+				transformOrigin: 'top left'
+			});
+
+			return;
+		}
 
 		gsap.set(cloudEl, {
-			x: startX,
-			y: startY,
+			x: Math.random() * (window.innerWidth - cloudWidth * startScale),
+			y: randomY(),
 			scale: startScale,
+			opacity: 0,
 			transformOrigin: 'top left'
 		});
 
-		// Fade in
+		const masterTimeline = gsap.timeline();
 
-		const move = tween(cloudEl, {
-			x: window.innerWidth + cloudWidth,
-			duration,
-			ease: 'linear'
-		});
-
-		const fadeIn = tween(cloudEl, {
-			opacity: 1,
-			duration: 3
-		});
-
-		// Move to right edge
-		await Promise.all([move, fadeIn]);
-
-		// ----- Infinite looping timeline after first pass -----
-		const loopTimeline = gsap.timeline({ repeat: -1 });
-
-		loopTimeline
-			.set(cloudEl, {
-				opacity: 0,
-				x: -cloudWidth,
-				y: randomY(),
-				scale: randomScale()
-			})
-			.to(cloudEl, { opacity: 1, duration: 1 })
-			.to(cloudEl, {
+		masterTimeline.to(
+			cloudEl,
+			{
+				// (A) Move
 				x: window.innerWidth + cloudWidth,
 				duration,
 				ease: 'linear'
-			});
+			},
+			0
+		);
+
+		masterTimeline.to(
+			cloudEl,
+			{
+				// (B) Fade-in
+				opacity: 1,
+				duration: 3
+			},
+			0
+		);
+
+		masterTimeline.set(cloudEl, {
+			opacity: 0,
+			x: -cloudWidth,
+			y: randomY(),
+			scale: randomScale()
+		});
+
+		masterTimeline.to(cloudEl, { opacity: 1, duration: 1 }).to(cloudEl, {
+			x: window.innerWidth + cloudWidth,
+			duration,
+			ease: 'linear',
+			repeat: -1,
+			onRepeat: () => {
+				gsap.set(cloudEl, {
+					opacity: 0,
+					x: -cloudWidth,
+					y: randomY(),
+					scale: randomScale()
+				});
+				gsap.to(cloudEl, { opacity: 1, duration: 1 }); // Fade back in
+			}
+		});
 	});
 </script>
 
