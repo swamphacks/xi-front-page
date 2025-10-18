@@ -97,10 +97,10 @@
 	/>
 
 	<MovingPlane duration={20} />
-	<MovingCloud variant={1} duration={40} />
+	<!-- <MovingCloud variant={1} duration={40} />
 	<MovingCloud variant={1} duration={60} />
 	<MovingCloud variant={2} duration={60} />
-	<MovingCloud variant={2} duration={60} />
+	<MovingCloud variant={2} duration={60} /> -->
 </section>
 
 <style>
