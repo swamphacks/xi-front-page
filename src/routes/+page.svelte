@@ -11,7 +11,7 @@
 	import Button from '$lib/components/Button/Button.svelte';
 </script>
 
-<main>
+<main class="overflow-x-hidden">
 	<Landing />
 	<div class="relative h-[500vh] w-full bg-grass-background lg:h-[430vh]">
 		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">

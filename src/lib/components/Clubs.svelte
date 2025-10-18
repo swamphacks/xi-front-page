@@ -72,7 +72,7 @@
 				</div>
 
 				<div
-					class="group turn-right absolute -top-20 -left-2 z-20 cursor-pointer hover:rotate-2 md:top-0 md:left-40"
+					class="group turn-right absolute -top-20 -left-2 z-20 cursor-pointer hover:rotate-2 md:-top-10 md:left-40"
 				>
 					<a
 						href="https://ufcsu.org/"
@@ -95,7 +95,7 @@
 				</div>
 
 				<div
-					class="group turn-left absolute -top-30 right-40 z-20 cursor-pointer hover:rotate-2 md:top-120 md:-right-40"
+					class="group turn-left absolute -top-30 right-40 z-20 cursor-pointer hover:rotate-2 md:top-100 md:-right-40"
 				>
 					<a
 						href="https://www.ufdsi.com/"
@@ -118,7 +118,7 @@
 				</div>
 
 				<div
-					class="group turn-right absolute -top-25 right-0 z-20 cursor-pointer hover:rotate-2 md:top-40 md:right-200"
+					class="group turn-right absolute -top-25 right-0 z-20 cursor-pointer hover:rotate-2 md:top-10 md:right-200"
 				>
 					<a
 						href="https://www.gatorfes.org/"
@@ -165,7 +165,7 @@
 				</div>
 
 				<div
-					class="group turn-right absolute top-70 left-70 z-20 cursor-pointer hover:rotate-2 md:top-0 md:left-96"
+					class="group turn-right absolute top-70 left-70 z-20 cursor-pointer hover:rotate-2 md:-top-15 md:left-96"
 				>
 					<a
 						href="https://ieee.ece.ufl.edu/"
@@ -281,7 +281,7 @@
 				</div>
 
 				<div
-					class="group turn-right absolute right-60 -bottom-90 z-20 cursor-pointer hover:rotate-2 md:right-5 md:bottom-50"
+					class="group turn-right absolute right-60 -bottom-90 z-20 cursor-pointer hover:rotate-2 md:right-40 md:bottom-50"
 				>
 					<a
 						href="https://linktree.com/floridapuppyclub/"
@@ -305,7 +305,7 @@
 
 				<!-- Bottom organizations - much lower down -->
 				<div
-					class="group turn-left absolute -bottom-10 left-5 z-20 cursor-pointer hover:rotate-2 md:bottom-100 md:-left-40"
+					class="group turn-left absolute -bottom-10 left-5 z-20 cursor-pointer hover:rotate-2 md:bottom-150 md:-left-40"
 				>
 					<a
 						href="https://ufsit.club/"
@@ -374,7 +374,7 @@
 				</div>
 
 				<div
-					class="group turn-left absolute top-60 right-25 z-20 cursor-pointer hover:rotate-2 md:top-170 md:right-50"
+					class="group turn-left absolute top-60 right-25 z-20 cursor-pointer hover:rotate-2 md:top-120 md:right-80"
 				>
 					<a
 						href="https://ufwicse.com/"
@@ -440,7 +440,7 @@
 					</a>
 				</div>
 				<div
-					class="group turn-left absolute top-90 right-20 z-20 cursor-pointer hover:rotate-2 md:top-5 md:-right-40"
+					class="group turn-left absolute top-90 right-20 z-20 cursor-pointer hover:rotate-2 md:top-50 md:-right-30"
 				>
 					<a
 						href="https://www.winghacks.com/"
