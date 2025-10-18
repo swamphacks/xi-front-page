@@ -23,12 +23,16 @@
 	const randomScale = () =>
 		isMobile ? Math.random() * (0.05 - 0.02) + 0.02 : Math.random() * (0.08 - 0.06) + 0.06;
 
-	onMount(() => {
+	// Helper to return a promise when tween completes
+	const tween = (target: any, vars: gsap.TweenVars) =>
+		new Promise<void>((resolve) => gsap.to(target, { ...vars, onComplete: resolve }));
+
+	onMount(async () => {
 		if (!cloudEl) return;
 
 		const cloudWidth = cloudEl.offsetWidth;
 
-		// Initial spawn
+		// ----- First animation (spawn somewhere on screen) -----
 		const startScale = randomScale();
 		const startX = Math.random() * (window.innerWidth - cloudWidth * startScale);
 		const startY = randomY();
@@ -37,29 +41,41 @@
 			x: startX,
 			y: startY,
 			scale: startScale,
-			opacity: 0,
 			transformOrigin: 'top left'
 		});
 
 		// Fade in
-		gsap.to(cloudEl, { opacity: 1, duration: 1 });
 
-		// Animate with repeat: -1 (no recursion)
-		gsap.to(cloudEl, {
+		const move = tween(cloudEl, {
 			x: window.innerWidth + cloudWidth,
 			duration,
-			ease: 'linear',
-			repeat: -1,
-			onRepeat: () => {
-				// Reset to left offscreen and random Y + scale
-				const newScale = randomScale();
-				gsap.set(cloudEl, {
-					x: -cloudWidth * newScale,
-					y: randomY(),
-					scale: newScale
-				});
-			}
+			ease: 'linear'
 		});
+
+		const fadeIn = tween(cloudEl, {
+			opacity: 1,
+			duration: 3
+		});
+
+		// Move to right edge
+		await Promise.all([move, fadeIn]);
+
+		// ----- Infinite looping timeline after first pass -----
+		const loopTimeline = gsap.timeline({ repeat: -1 });
+
+		loopTimeline
+			.set(cloudEl, {
+				opacity: 0,
+				x: -cloudWidth,
+				y: randomY(),
+				scale: randomScale()
+			})
+			.to(cloudEl, { opacity: 1, duration: 1 })
+			.to(cloudEl, {
+				x: window.innerWidth + cloudWidth,
+				duration,
+				ease: 'linear'
+			});
 	});
 </script>
 

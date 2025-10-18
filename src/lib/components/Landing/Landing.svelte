@@ -11,12 +11,12 @@
 	<MovingPlane duration={30} />
 
 	<!-- Clouds -->
-	<!-- <MovingCloud variant={1} duration={300} />
+	<MovingCloud variant={1} duration={300} />
 	<MovingCloud variant={2} duration={310} />
 	<MovingCloud variant={3} duration={280} />
 	<MovingCloud variant={4} duration={320} />
 	<MovingCloud variant={1} duration={278} />
-	<MovingCloud variant={3} duration={297} /> -->
+	<MovingCloud variant={3} duration={293} />
 
 	<!-- Title + Button Container -->
 	<div
