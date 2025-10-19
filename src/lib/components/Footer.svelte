@@ -86,7 +86,7 @@
 		src={middleBg}
 		alt="middle layer"
 		bind:this={middleEl}
-		class="pointer-events-none absolute bottom-27 left-0 z-10 w-full object-cover will-change-transform select-none md:bottom-10 2xl:bottom-100"
+		class="pointer-events-none absolute bottom-27 left-0 z-10 w-full object-cover will-change-transform select-none md:bottom-10 2xl:bottom-50"
 	/>
 
 	<img

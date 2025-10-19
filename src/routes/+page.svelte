@@ -66,7 +66,7 @@
 			</div>
 
 			<div class="bg-blue-100"><Footer /></div>
-			<div class="flex justify-center md:justify-between items-center p-4 bg-black w-full text-center">
+			<div class="flex justify-center items-center gap-2 p-4 bg-black w-full text-center">
 				<p class="text-[10px] font-beachday text-white md:text-lg">Made with ❤️ by the Swamphacks Team</p>
 				<p class="text-[8px] md:text-base text-white">© 2025</p>
 			</div>

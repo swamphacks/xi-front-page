@@ -4,7 +4,7 @@
   export let height: string = '160px';
   export let className: string = '';
   const pattern = [1, 2, 3, 4];
-  const variants = Array.from({ length: 8 }, (_, i) => pattern[i % pattern.length]);
+  const variants = Array.from({ length: 10 }, (_, i) => pattern[i % pattern.length]);
 </script>
 
 <div class="cloud-divider {className}" style="height: {height};">
@@ -42,7 +42,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    margin-left: -6%;
+    margin-left: -10%;
     position: relative;
     z-index: 1;
   }
@@ -64,7 +64,7 @@
   .cloud-wrap:nth-child(even) { z-index: 1; transform: translateY(6%); }
 
   @media (max-width: 768px) {
-    .cloud-wrap { flex: 0 0 36%; margin-left: -18%; }
+    .cloud-wrap { flex: 0 0 40%; margin-left: -8%; }
   }
 
   @media (max-width: 640px) {
