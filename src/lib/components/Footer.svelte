@@ -7,7 +7,6 @@
 	import MovingPlane from './Landing/MovingPlane.svelte';
 	import MovingCloud from './Landing/MovingCloud.svelte';
     import Link from './Link/Link.svelte';
-	// Bind refs to avoid getElementById + null checks
 	let backEl: HTMLImageElement;
 	let middleEl: HTMLImageElement;
 	let frontEl: HTMLImageElement;
@@ -16,25 +15,20 @@
 	let isVisible = false;
 	let rafId: number | null = null;
 
-	// Helper: clamp value
 	const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(max, v));
 
-	// Animate using rAF to keep things smooth
 	const tick = () => {
 		const scrollY = window.scrollY;
 		const vh = window.innerHeight;
 
-		// Compute scroll *within* the section to avoid runaway drift
 		const rect = sectionEl.getBoundingClientRect();
-		const sectionTop = scrollY + rect.top; // pageY at which section starts
-		const rel = clamp(scrollY - sectionTop, 0, rect.height + vh); // how far user has scrolled past section top
-		// Speeds (negative = move up as user scrolls down)
+		const sectionTop = scrollY + rect.top;
+		const rel = clamp(scrollY - sectionTop, 0, rect.height + vh);
 		const sBack = -0.1;
 		const sMid = -0.3;
 		const sFront = -0.5;
 
-		// Cap how far each layer can move so they stay visible
-		const maxShift = 200; // px
+		const maxShift = 200;
 		const tBack = clamp(rel * sBack, -maxShift, 0);
 		const tMid = clamp(rel * sMid, -maxShift, 0);
 		const tFront = clamp(rel * sFront, -maxShift, 0);
@@ -43,7 +37,6 @@
 		if (middleEl) middleEl.style.transform = `translateY(${tMid}px)`;
 		if (frontEl) frontEl.style.transform = `translateY(${tFront}px)`;
 
-		// Reveal footer text around halfway into the section view
 		const visibleThreshold = vh * 0.45;
 		const sectionVisibleAmount = clamp(vh - rect.top, 0, vh);
 		isVisible = sectionVisibleAmount > visibleThreshold;
@@ -53,7 +46,7 @@
 
 	onMount(() => {
 		rafId = requestAnimationFrame(tick);
-		const onResize = () => {}; // layout reads happen in tick()
+		const onResize = () => {};
 		window.addEventListener('resize', onResize);
 
 		return () => {
@@ -63,8 +56,7 @@
 	});
 </script>
 
-<section bind:this={sectionEl} class="relative size-full h-[500px] overflow-hidden md:h-[1000px] xl:h-[150vh]">
-	<!-- Top copy -->
+<section bind:this={sectionEl} class="relative size-full h-[500px] overflow-hidden md:h-[800px] lg:h-[1000px] xl:h-[150vh]">
 	<div
 		class="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-center will-change-transform md:bottom-40 w-full"
 	>
@@ -75,12 +67,11 @@
 		</Link>
 	</div>
 
-	<!-- Parallax layers -->
 	<img
 		src={backBg}
 		alt="back layer"
 		bind:this={backEl}
-		class="pointer-events-none absolute bottom-0 left-0 z-0 w-full will-change-transform select-none md:-bottom-100 xl:-bottom-100"
+		class="pointer-events-none absolute bottom-0 left-0 z-0 w-full will-change-transform select-none md:-bottom-30 lg:-bottom-100 xl:-bottom-100"
 	/>
 	<img
 		src={middleBg}
@@ -95,8 +86,8 @@
 		bind:this={frontEl}
 		class="pointer-events-none absolute bottom-0 left-0 z-30 w-full object-cover will-change-transform select-none md:-bottom-80"
 	/>
-
 	<MovingPlane duration={20} />
+	
 	<!-- <MovingCloud variant={1} duration={40} />
 	<MovingCloud variant={1} duration={60} />
 	<MovingCloud variant={2} duration={60} />

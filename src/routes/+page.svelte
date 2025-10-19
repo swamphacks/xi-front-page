@@ -61,7 +61,7 @@
 			</div>
 
 			<!-- Cloud divider between clubs and footer -->
-			<div class="w-full">
+			<div class="w-full h-[5rem] xl:h-[10rem] 2xl:h-[12rem]">
 				<CloudDivider height="20rem"/>
 			</div>
 
