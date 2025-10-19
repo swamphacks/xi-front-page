@@ -63,7 +63,7 @@
 	});
 </script>
 
-<section bind:this={sectionEl} class="relative size-full h-[500px] overflow-hidden md:h-[1200px]">
+<section bind:this={sectionEl} class="relative size-full h-[500px] overflow-hidden md:h-[1100px]">
 	<!-- Top copy -->
 	<div
 		class="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-center will-change-transform md:bottom-40"
