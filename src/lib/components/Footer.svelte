@@ -63,10 +63,10 @@
 	});
 </script>
 
-<section bind:this={sectionEl} class="relative size-full h-[500px] overflow-hidden md:h-[1100px]">
+<section bind:this={sectionEl} class="relative size-full h-[500px] overflow-hidden md:h-[1000px] xl:h-[150vh]">
 	<!-- Top copy -->
 	<div
-		class="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-center will-change-transform md:bottom-40"
+		class="absolute bottom-6 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center gap-4 text-center will-change-transform md:bottom-40 w-full"
 	>
 		<p class="font-beachday text-2xl font-bold text-white md:text-6xl">Ready to Hack?</p>
 		<Link href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application">
@@ -80,20 +80,20 @@
 		src={backBg}
 		alt="back layer"
 		bind:this={backEl}
-		class="pointer-events-none absolute bottom-0 left-0 z-0 w-full will-change-transform select-none md:-bottom-80"
+		class="pointer-events-none absolute bottom-0 left-0 z-0 w-full will-change-transform select-none md:-bottom-100 xl:-bottom-100"
 	/>
 	<img
 		src={middleBg}
 		alt="middle layer"
 		bind:this={middleEl}
-		class="pointer-events-none absolute bottom-27 left-0 z-10 w-full will-change-transform select-none md:bottom-20"
+		class="pointer-events-none absolute bottom-27 left-0 z-10 w-full object-cover will-change-transform select-none md:bottom-10 2xl:bottom-100"
 	/>
 
 	<img
 		src={frontBg}
 		alt="front layer"
 		bind:this={frontEl}
-		class="pointer-events-none absolute bottom-0 left-0 z-30 will-change-transform select-none md:-bottom-60"
+		class="pointer-events-none absolute bottom-0 left-0 z-30 w-full object-cover will-change-transform select-none md:-bottom-80"
 	/>
 
 	<MovingPlane duration={20} />

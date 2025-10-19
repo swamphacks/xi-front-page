@@ -9,6 +9,7 @@
 	import Link from '$lib/components/Link/Link.svelte';
 	import { onMount } from 'svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import CloudDivider from '$lib/components/CloudDivider.svelte';
 
 	let isMobile = false;
 
@@ -59,7 +60,11 @@
 				<Clubs />
 			</div>
 
-			<!-- <div class="my-32 flex flex-col items-center"> -->
+			<!-- Cloud divider between clubs and footer -->
+			<div class="w-full">
+				<CloudDivider height="20rem"/>
+			</div>
+
 			<div class="bg-blue-100"><Footer /></div>
 			<div class="flex justify-center md:justify-between items-center p-4 bg-black w-full text-center">
 				<p class="text-[10px] font-beachday text-white md:text-lg">Made with ❤️ by the Swamphacks Team</p>
