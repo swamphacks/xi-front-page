@@ -23,31 +23,31 @@
 		},
 		{
 			src: Track2,
-			alt: 'AI/ML Track',
-			title: 'AI/ML Track',
+			alt: 'Education, Accessibility & Social Impact',
+			title: 'Education, Accessibility & Social Impact',
 			description:
-				'Projects that leverage artificial intelligence or machine learning to solve problems, create new experiences, or enhance existing technologies.'
+				'Build tech that makes a difference. Create solutions that empower communities, improve access, and shape a more inclusive world.'
 		},
 		{
 			src: Track3,
-			alt: 'Health Tech Track',
-			title: 'Health Tech Track',
+			alt: 'Sustainability',
+			title: 'Sustainability',
 			description:
-				'Innovative solutions aimed at improving healthcare delivery, patient outcomes, or medical research through technology.'
+				'Hack for a greener future. Design innovative tools and technologies that protect the planet and promote sustainable living.'
 		},
 		{
 			src: Track4,
-			alt: 'Sustainability Track',
-			title: 'Sustainability Track',
+			alt: 'Game Design',
+			title: 'Game Design',
 			description:
-				'Projects focused on environmental sustainability, renewable energy, conservation, or addressing climate change through technological innovation.'
+				'Bring your imagination to life! Develop immersive games that entertain, inspire, or tell a story only you can create.'
 		},
 		{
 			src: Track5,
-			alt: 'Social Impact Track',
-			title: 'Social Impact Track',
+			alt: 'The Design of Everyday Life (Human-Centered Design)',
+			title: 'The Design of Everyday Life (Human-Centered Design)',
 			description:
-				'Technological solutions designed to address social issues, improve community well-being, or promote equity and inclusion.'
+				'Design creative, user-focused solutions that enhance daily experiences and wellbeing.'
 		}
 	];
 	let current = 0;
@@ -57,7 +57,6 @@
 	// 2. Initialise radiusX and radiusY using the isMobile value
 	let radiusX = isMobile ? 130 : 300; // horizontal spread
 	let radiusY = isMobile ? 70 : 90; // vertical curve
-
 
 	function getPosition(i: number) {
 		const offset = (i - current + tracks.length) % tracks.length;
@@ -108,11 +107,10 @@
 </script>
 
 <section
-	class="relative mt-24 flex min-h-[60vh] flex-col items-center justify-center overflow-hidden mb-24"
+	class="relative mt-24 mb-24 flex min-h-[60vh] flex-col items-center justify-center overflow-hidden"
 >
-	<div class="mb-24 flex flex-col items-center justify-center gap-2 md:mb-48">
+	<div class="mb-24 flex flex-col items-center justify-center gap-2 md:mb-35">
 		<h2 class="font-beachday text-5xl text-white">Tracks</h2>
-		<p class="text-md font-beachday text-neutral-200">(Click on each landmark to see more)</p>
 	</div>
 	<div class="relative flex h-[300px] w-full max-w-[600px] items-center justify-center">
 		{#each tracks as track, i (i)}
@@ -140,9 +138,9 @@
 
 	<div class="flex w-full flex-col items-center justify-center">
 		<div
-			class="duration-300 flex flex-col items-center justify-center rounded-2xl border-8 border-amber-200 bg-amber-100 p-4 text-black transition-all gap-4"
+			class="m-4 flex flex-col items-center justify-center gap-4 rounded-2xl border-8 border-amber-200 bg-amber-100 p-4 text-black transition-all duration-300 lg:m-0"
 		>
-			<h3 class="font-beachday text-3xl text-center">{tracks[current].title}</h3>
+			<h3 class="text-center font-beachday text-3xl">{tracks[current].title}</h3>
 			<p class="max-w-xl text-center font-montserrat text-lg">{tracks[current].description}</p>
 		</div>
 	</div>

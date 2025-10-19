@@ -1,7 +1,7 @@
 <script lang="ts">
 	// You might not need a script tag if it's just an SVG,
 	// but it's good practice to keep it if you plan to add interactivity later.
-	import Car from '$lib/assets/Car_Front.png';
+	import Car from '$lib/assets/Car_Front_rotatable.png';
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	import { MotionPathPlugin, ScrollTrigger } from 'gsap/all';
@@ -20,28 +20,33 @@
 
 		gsap.set(carEl, { opacity: 1 });
 
-		gsap.to(carEl, {
+		const pathTween = gsap.to(carEl, {
 			scrollTrigger: {
 				trigger: path,
 				start: 'top center',
-				end: "bottom top",
-				scrub: true,
+				end: 'bottom top',
+				pin: true,
+				pinSpacing: false,
+				scrub: true
 			},
 			immediateRender: true,
 			motionPath: {
 				path: path,
 				align: path,
 				alignOrigin: [0.5, 0.5],
+				autoRotate: true
 			},
+			ease: 'none',
+			paused: true
 		});
 	});
 </script>
 
 <div
-	class="pointer-events-none absolute top-0 flex h-full min-h-[200vh] w-full items-start justify-center
-           sm:min-h-[250vh] left-2/5 md:min-h-[200vh] lg:min-h-[150vh] xl:min-h-screen"
+	class="pointer-events-none absolute top-0 left-2/5 flex h-full min-h-[200vh] w-full items-start
+           justify-center sm:min-h-[250vh] md:min-h-[200vh] lg:min-h-[150vh] xl:min-h-screen"
 >
-	<img bind:this={carEl} src={Car} alt="Car" class="h-8 md:h-16 lg:h-20 absolute opacity-0" />
+	<img bind:this={carEl} src={Car} alt="Car" class="absolute h-8 opacity-0 md:h-16 lg:h-20" />
 	<svg
 		stroke-miterlimit="10"
 		style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;"
