@@ -19,7 +19,7 @@
 
 <style>
   .cloud-divider {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     display: block;
     position: relative;
@@ -29,7 +29,7 @@
   }
   .cloud-row {
     display: flex;
-    width: calc(100% + 20rem);
+    width: calc(100% + 8rem);
     gap: 0;
     align-items: flex-end;
     justify-content: flex-start;
@@ -37,8 +37,8 @@
   }
 
   .cloud-wrap {
-    flex: 0 0 22%;
-    min-width: 20%;
+    flex: 0 0 24%;
+    min-width: 18%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -64,7 +64,7 @@
   .cloud-wrap:nth-child(even) { z-index: 1; transform: translateY(6%); }
 
   @media (max-width: 768px) {
-    .cloud-wrap { flex: 0 0 40%; margin-left: -8%; }
+    .cloud-wrap { flex: 0 0 40%; margin-left: -12%; }
   }
 
   @media (max-width: 640px) {
