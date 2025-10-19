@@ -165,10 +165,11 @@
 			</div>
 		</div>
 	</div>
-
+	
 	<div
-		class="mt-6 w-full px-4 font-montserrat text-base leading-relaxed font-medium text-[#F7F2E9] md:mt-12 md:max-w-1/2 md:px-0 md:text-lg lg:text-xl"
+		class="mt-6 w-[90%] md:w-full p-4 font-montserrat text-base leading-relaxed text-[#124B2C] md:mt-12 md:max-w-1/2 md:text-lg lg:text-xl bg-[#FEF3C6] rounded-lg border-10 border-[#FEE685]"
 	>
+
 		<p class="mb-4">
 			SwampHacks is the University of Florida’s flagship hackathon, bringing together <span
 				class="font-bold">300+</span
