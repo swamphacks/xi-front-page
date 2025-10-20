@@ -1,5 +1,4 @@
 <script>
-	import BreakpointIndicator from '$lib/components/BreakpointIndicator.svelte';
 	import Landing from '$lib/components/Landing/Landing.svelte';
 	import Road from '$lib/components/Road.svelte';
 	import FAQ from '$lib/components/FAQ/FAQ.svelte';
@@ -8,35 +7,41 @@
 	import Clubs from '$lib/components/Clubs.svelte';
 	import lakeSrc from '$lib/assets/Lake.png';
 	import Link from '$lib/components/Link/Link.svelte';
-	import Button from '$lib/components/Button/Button.svelte';
+	import { onMount } from 'svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import CloudDivider from '$lib/components/CloudDivider.svelte';
+
+	let isMobile = false;
+
+	const checkMobile = () => {
+		isMobile = window.innerWidth < 1024;
+	};
+
+	onMount(() => {
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+		return () => window.removeEventListener('resize', checkMobile);
+	});
+	
 </script>
 
-<main class="overflow-x-hidden">
+<main class="w-screen overflow-x-hidden">
 	<Landing />
-	<div class="relative h-[500vh] w-full bg-grass-background lg:h-[430vh]">
-		<div class="absolute top-[-20px] left-[90%] -translate-x-1/2 md:top-[-50px] md:left-3/4">
-			<Road />
-		</div>
+	<div class="relative min-h-[500vh] w-full bg-grass-background lg:min-h-[430vh]">
 		<div
 			class="relative min-h-[200vh] w-full overflow-hidden bg-grass-background sm:min-h-[250vh] lg:min-h-[200vh] xl:min-h-[200vh]"
 		>
-			<div class="hidden lg:block">
+			{#if !isMobile}
 				<Road />
-			</div>
+			{/if}
 
 			<!-- Content 1 (About Us)-->
 			<div class="h-1/3">
 				<About />
 			</div>
-
-			<!-- Content 2 (Tracks)-->
-			<Tracks />
-
-			<!-- Content goes here -->
-
-			<!-- About -->
-			<!-- <About /> -->
-			<!-- FAQ -->
+			<div>
+				<Tracks />
+			</div>
 			<div class="h-1/3">
 				<FAQ />
 			</div>
@@ -51,27 +56,20 @@
 					<h4 class="font-beachday text-3xl">To be announced!</h4>
 				</div>
 			</div>
-			<div class="h-[1000px]">
+			<div class="h-[1200px]">
 				<Clubs />
 			</div>
-			
 
-			<div class="my-32 flex flex-col items-center">
-				<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
-					Ready to hack?
-				</h3>
-				<Link
-					href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application"
-				>
-					<h3
-						class="font-outline mt-8 cursor-pointer font-beachday text-3xl text-end-button hover:text-button-hover active:text-button-active-text md:text-6xl lg:text-8xl 2xl:text-7xl"
-					>
-						Register Now
-					</h3>
-				</Link>
+			<!-- Cloud divider between clubs and footer -->
+			<div class="w-full h-[5rem] xl:h-[10rem] 2xl:h-[12rem]">
+				<CloudDivider height="20rem"/>
+			</div>
+
+			<div class="bg-blue-100"><Footer /></div>
+			<div class="flex justify-center items-center gap-2 p-4 bg-black w-full text-center">
+				<p class="text-[10px] font-beachday text-white md:text-lg">Made with ❤️ by the Swamphacks Team</p>
+				<p class="text-[8px] md:text-base text-white">© 2025</p>
 			</div>
 		</div>
 	</div>
 </main>
-
-<BreakpointIndicator />
