@@ -8,6 +8,8 @@
 	import lakeSrc from '$lib/assets/Lake.png';
 	import Link from '$lib/components/Link/Link.svelte';
 	import { onMount } from 'svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import CloudDivider from '$lib/components/CloudDivider.svelte';
 
 	let isMobile = false;
 
@@ -20,6 +22,7 @@
 		window.addEventListener('resize', checkMobile);
 		return () => window.removeEventListener('resize', checkMobile);
 	});
+	
 </script>
 
 <main class="w-screen overflow-x-hidden">
@@ -53,23 +56,19 @@
 					<h4 class="font-beachday text-3xl">To be announced!</h4>
 				</div>
 			</div>
-			<div class="h-[1000px]">
+			<div class="h-[1200px]">
 				<Clubs />
 			</div>
 
-			<div class="my-32 flex flex-col items-center">
-				<h3 class="font-beachday text-5xl text-white md:text-6xl lg:text-8xl 2xl:text-9xl">
-					Ready to hack?
-				</h3>
-				<Link
-					href="https://app.swamphacks.com/events/53a94d27-4525-489b-8467-a0412722b313/application"
-				>
-					<h3
-						class="font-outline mt-8 cursor-pointer font-beachday text-3xl text-end-button hover:text-button-hover active:text-button-active-text md:text-6xl lg:text-8xl 2xl:text-7xl"
-					>
-						Register Now
-					</h3>
-				</Link>
+			<!-- Cloud divider between clubs and footer -->
+			<div class="w-full h-[5rem] xl:h-[10rem] 2xl:h-[12rem]">
+				<CloudDivider height="20rem"/>
+			</div>
+
+			<div class="bg-blue-100"><Footer /></div>
+			<div class="flex justify-center items-center gap-2 p-4 bg-black w-full text-center">
+				<p class="text-[10px] font-beachday text-white md:text-lg">Made with ❤️ by the Swamphacks Team</p>
+				<p class="text-[8px] md:text-base text-white">© 2025</p>
 			</div>
 		</div>
 	</div>
