@@ -2,11 +2,12 @@
 	type Player = {
 		id: number;
 		name: string;
-		role: string; // ✅ new field
-		linkedin: string; // ✅ new field
+		role: string;
+		linkedin: string;
 		x: number;
 		y: number;
 		img: string;
+		team: string;
 	};
 
 	import Stadium from '$lib/assets/stadium.svg';
@@ -44,293 +45,336 @@
 	import Robert from '$lib/assets/dot-pfps/robert-conde.jpg';
 
 	let players: Player[] = [
+		// ===== OPERATIONS (row 1 + part of row 2) =====
 		{
 			id: 1,
-			name: 'Alexander Wang',
-			role: 'Executive of Technology',
-			linkedin: 'https://www.linkedin.com/in/alexanderwangy/',
-			x: 1700,
-			y: 2000,
-			img: Alex
-		},
-		{
-			id: 2,
-			name: 'Phoenix Gutierrez',
-			role: 'Executive of Technology',
-			linkedin: 'https://www.linkedin.com/in/phoenixgutierrez/',
-			x: 2100,
-			y: 1800,
-			img: Phoenix
-		},
-		{
-			id: 3,
-			name: 'Stanley Ke',
-			role: 'Discord Moderator',
-			linkedin: 'https://www.linkedin.com/in/stanley-ke/',
-			x: 2500,
-			y: 1600,
-			img: Stanley
-		},
-		{
-			id: 4,
-			name: 'Hugo Liu',
-			role: 'Software Engineer',
-			linkedin: 'https://www.linkedin.com/in/hugo-liu-dolphin/',
-			x: 2900,
-			y: 1400,
-			img: Hugo
-		},
-		{
-			id: 5,
-			name: 'Hieu Nguyen',
-			role: 'Software Engineer',
-			linkedin: 'https://www.linkedin.com/in/hieutnguyendev/',
-			x: 3300,
-			y: 1250,
-			img: Hieu
-		},
-		{
-			id: 6,
-			name: 'Kayla Inoa',
-			role: 'UX/UI Designer',
-			linkedin: 'https://www.linkedin.com/in/kayla-inoa/',
-			x: 3680,
-			y: 1100,
-			img: Kayla
-		},
-		{
-			id: 7,
-			name: 'Anthony Le',
-			role: 'Executive of Marketing',
-			linkedin: 'https://www.linkedin.com/in/l-anthony/',
-			x: 1900,
-			y: 2400,
-			img: Anthony
-		},
-		{
-			id: 8,
-			name: 'Tina Mei',
-			role: 'Executive of Marketing',
-			linkedin: 'https://www.linkedin.com/in/tmeixyz/',
-			x: 2300,
-			y: 2200,
-			img: Tina
-		},
-		{
-			id: 9,
-			name: 'MJ Tady',
-			role: 'Content Coordinator',
-			linkedin: 'https://www.linkedin.com/in/maria-juliana-tady/',
-			x: 2700,
-			y: 2000,
-			img: MJ
-		},
-		{
-			id: 10,
-			name: 'Shivani Chandrasekar',
-			role: 'Content Coordinator',
-			linkedin: 'https://www.linkedin.com/',
-			x: 3100,
-			y: 1800,
-			img: Shivani
-		},
-		{
-			id: 11,
-			name: 'Jessie Lin',
-			role: 'Merch Coordinator',
-			linkedin: 'https://www.linkedin.com/',
-			x: 3500,
-			y: 1600,
-			img: Jessie
-		},
-		{
-			id: 12,
-			name: 'Zhiting Li',
-			role: 'Public Relations Coordinator',
-			linkedin: 'https://www.linkedin.com/in/zhitingli/',
-			x: 3900,
-			y: 1420,
-			img: Zhiting
-		},
-		{
-			id: 13,
-			name: 'Jessica Barnes',
-			role: 'Food/Vendor Relations Coordinator',
-			linkedin: 'https://www.linkedin.com/in/jessica-m-barnes-uflorida/',
-			x: 2800,
-			y: 2400,
-			img: Jessica
-		},
-		{
-			id: 14,
-			name: 'Daniel Romero',
-			role: 'Company Connect Coordinator',
-			linkedin: 'https://www.linkedin.com',
-			x: 3200,
-			y: 2200,
-			img: Daniel
-		},
-		{
-			id: 15,
-			name: 'Nikki Chen',
-			role: 'Sponsor Relations Coordinator',
-			linkedin: 'https://www.linkedin.com/in/nikki-chen23/',
-			x: 3600,
-			y: 1980,
-			img: Nikki
-		},
-		{
-			id: 16,
-			name: 'Gaby Smith',
-			role: 'Sponsor Relations Coordinator',
-			linkedin: 'https://www.linkedin.com/in/gabriela-smith-61399026b/',
-			x: 4000,
-			y: 1800,
-			img: Gaby
-		},
-		{
-			id: 17,
-			name: 'Domenica Simbana Mosquera',
-			role: 'Executive of Finance',
-			linkedin: 'https://www.linkedin.com/in/domenica-simbana/',
-			x: 3100,
-			y: 2650,
-			img: Domenica
-		},
-		{
-			id: 18,
-			name: 'Wilson Goins',
-			role: 'Executive of Finance',
-			linkedin: 'https://www.linkedin.com/in/wilson-goins/',
-			x: 3500,
-			y: 2500,
-			img: Wilson
-		},
-		{
-			id: 19,
-			name: 'Alyssa Mann',
-			role: 'Executive of Logistics',
-			linkedin: 'https://www.linkedin.com/in/alyssa-m-mann/',
-			x: 3900,
-			y: 2300,
-			img: Alyssa
-		},
-		{
-			id: 20,
-			name: 'Leyna Huynh',
-			role: 'Judges Coordinator',
-			linkedin: 'https://www.linkedin.com/in/leynahuynh1/',
-			x: 4300,
-			y: 2100,
-			img: Leyna
-		},
-		{
-			id: 21,
-			name: 'Cara Kulhanjian',
-			role: 'Mentor Coordinator',
-			linkedin: 'https://www.linkedin.com/in/cara-kulhanjian/',
-			x: 5000,
-			y: 700,
-			img: Cara
-		},
-		{
-			id: 22,
-			name: 'James Fouts',
-			role: 'Volunteer Coordinator',
-			linkedin: 'https://www.linkedin.com/in/james-fouts-4a2307292/',
-			x: 5550,
-			y: 780,
-			img: James
-		},
-		{
-			id: 23,
-			name: 'Mya Ramsey',
-			role: 'Executive of Operations',
-			linkedin: 'https://www.linkedin.com/in/mya-ramsey-uf/',
-			x: 6100,
-			y: 850,
-			img: Mya
-		},
-		{
-			id: 24,
 			name: 'Meaghan Knowles',
 			role: 'Hacker Experience Coordinator',
 			linkedin: 'https://www.linkedin.com/in/meaghan-knowles/',
-			x: 6650,
-			y: 950,
-			img: Meaghan
+			x: 1700,
+			y: 2000,
+			img: Meaghan,
+			team: 'Operations'
 		},
 		{
-			id: 25,
+			id: 2,
 			name: 'Pranathi Madishetty',
 			role: 'Hacker Experience Coordinator',
 			linkedin: 'https://www.linkedin.com/in/pranathi-madishetty-393aab287/',
-			x: 7200,
-			y: 1050,
-			img: Pranathi
+			x: 2100,
+			y: 1800,
+			img: Pranathi,
+			team: 'Operations'
 		},
 		{
-			id: 26,
-			name: 'Sebastian Garcia',
-			role: 'Judging & Awards Coordinator',
-			linkedin: 'https://www.linkedin.com/in/sebastian-garcia100/',
-			x: 5200,
-			y: 1100,
-			img: Sebastian
-		},
-		{
-			id: 27,
-			name: 'Brock Gilman',
-			role: 'Social Events Coordinator',
-			linkedin: 'https://www.linkedin.com/in/brock-gilman/',
-			x: 5750,
-			y: 1200,
-			img: Brock
-		},
-		{
-			id: 28,
+			id: 3,
 			name: 'Ana Petrela',
 			role: 'Workshop Coordinator',
 			linkedin: 'https://www.linkedin.com/in/ana-petrela-bb8bb8317/',
-			x: 6300,
-			y: 1300,
-			img: Ana
+			x: 2500,
+			y: 1600,
+			img: Ana,
+			team: 'Operations'
 		},
 		{
-			id: 29,
+			id: 4,
 			name: 'Neema Owji',
 			role: 'Workshop Coordinator',
 			linkedin: 'https://www.linkedin.com/in/neema-owji/',
-			x: 6800,
+			x: 2900,
 			y: 1400,
-			img: Neema
+			img: Neema,
+			team: 'Operations'
 		},
 		{
-			id: 30,
-			name: 'Shane Downs',
-			role: 'Senior Advisor',
-			linkedin: 'https://www.linkedin.com/in/shanemdowns/',
-			x: 7300,
-			y: 1500,
-			img: Shane
+			id: 5,
+			name: 'Sebastian Garcia',
+			role: 'Judging & Awards Coordinator',
+			linkedin: 'https://www.linkedin.com/in/sebastian-garcia100/',
+			x: 3300,
+			y: 1250,
+			img: Sebastian,
+			team: 'Operations'
 		},
 		{
-			id: 31,
+			id: 6,
+			name: 'Brock Gilman',
+			role: 'Social Events Coordinator',
+			linkedin: 'https://www.linkedin.com/in/brock-gilman/',
+			x: 3680,
+			y: 1100,
+			img: Brock,
+			team: 'Operations'
+		},
+		{
+			id: 7,
+			name: 'Jessie Lin',
+			role: 'Merch Coordinator',
+			linkedin: 'https://www.linkedin.com/',
+			x: 1450,
+			y: 2400,
+			img: Jessie,
+			team: 'Operations'
+		},
+
+		// ===== TECHNOLOGY (remainder of row 2) =====
+		{
+			id: 8,
+			name: 'Stanley Ke',
+			role: 'Discord Moderator',
+			linkedin: 'https://www.linkedin.com/in/stanley-ke/',
+			x: 1900,
+			y: 2400,
+			img: Stanley,
+			team: 'Technology'
+		},
+		{
+			id: 9,
+			name: 'Hugo Liu',
+			role: 'Software Engineer',
+			linkedin: 'https://www.linkedin.com/in/hugo-liu-dolphin/',
+			x: 2300,
+			y: 2200,
+			img: Hugo,
+			team: 'Technology'
+		},
+		{
+			id: 10,
+			name: 'Hieu Nguyen',
+			role: 'Software Engineer',
+			linkedin: 'https://www.linkedin.com/in/hieutnguyendev/',
+			x: 2700,
+			y: 2000,
+			img: Hieu,
+			team: 'Technology'
+		},
+		{
+			id: 11,
+			name: 'Kayla Inoa',
+			role: 'UX/UI Designer',
+			linkedin: 'https://www.linkedin.com/in/kayla-inoa/',
+			x: 3100,
+			y: 1800,
+			img: Kayla,
+			team: 'Technology'
+		},
+
+		// ===== FINANCE (row 3) =====
+		{
+			id: 12,
+			name: 'Jessica Barnes',
+			role: 'Food/Vendor Relations Coordinator',
+			linkedin: 'https://www.linkedin.com/in/jessica-m-barnes-uflorida/',
+			x: 3500,
+			y: 1600,
+			img: Jessica,
+			team: 'Finance'
+		},
+		{
+			id: 13,
+			name: 'Daniel Romero',
+			role: 'Company Connect Coordinator',
+			linkedin: 'https://www.linkedin.com',
+			x: 3900,
+			y: 1420,
+			img: Daniel,
+			team: 'Finance'
+		},
+		{
+			id: 14,
+			name: 'Nikki Chen',
+			role: 'Sponsor Relations Coordinator',
+			linkedin: 'https://www.linkedin.com/in/nikki-chen23/',
+			x: 2850,
+			y: 2350,
+			img: Nikki,
+			team: 'Finance'
+		},
+		{
+			id: 15,
+			name: 'Gaby Smith',
+			role: 'Sponsor Relations Coordinator',
+			linkedin: 'https://www.linkedin.com/in/gabriela-smith-61399026b/',
+			x: 3250,
+			y: 2180,
+			img: Gaby,
+			team: 'Finance'
+		},
+
+		// ===== LOGISTICS (row 4) =====
+		{
+			id: 16,
+			name: 'Leyna Huynh',
+			role: 'Judges Coordinator',
+			linkedin: 'https://www.linkedin.com/in/leynahuynh1/',
+			x: 3650,
+			y: 1980,
+			img: Leyna,
+			team: 'Logistics'
+		},
+		{
+			id: 17,
+			name: 'Cara Kulhanjian',
+			role: 'Mentor Coordinator',
+			linkedin: 'https://www.linkedin.com/in/cara-kulhanjian/',
+			x: 4050,
+			y: 1780,
+			img: Cara,
+			team: 'Logistics'
+		},
+		{
+			id: 18,
+			name: 'James Fouts',
+			role: 'Volunteer Coordinator',
+			linkedin: 'https://www.linkedin.com/in/james-fouts-4a2307292/',
+			x: 3100,
+			y: 2650,
+			img: James,
+			team: 'Logistics'
+		},
+
+		// ===== MARKETING =====
+		{
+			id: 19,
+			name: 'MJ Tady',
+			role: 'Content Coordinator',
+			linkedin: 'https://www.linkedin.com/in/maria-juliana-tady/',
+			x: 3500,
+			y: 2500,
+			img: MJ,
+			team: 'Marketing'
+		},
+		{
+			id: 20,
+			name: 'Shivani Chandrasekar',
+			role: 'Content Coordinator',
+			linkedin: 'https://www.linkedin.com/',
+			x: 3900,
+			y: 2300,
+			img: Shivani,
+			team: 'Marketing'
+		},
+		{
+			id: 21,
+			name: 'Zhiting Li',
+			role: 'Public Relations Coordinator',
+			linkedin: 'https://www.linkedin.com/in/zhitingli/',
+			x: 4300,
+			y: 2100,
+			img: Zhiting,
+			team: 'Marketing'
+		},
+
+		// ===== ORGANIZER & EXECUTIVE (unchanged) =====
+		{
+			id: 22,
 			name: 'Elle Strauss',
 			role: 'Co-Organizer (President)',
 			linkedin: 'https://www.linkedin.com/in/ellestrauss/',
-			x: 5500,
-			y: 1920,
-			img: Elle
+			x: 4900,
+			y: 720,
+			img: Elle,
+			team: 'Executive'
 		},
 		{
-			id: 32,
+			id: 23,
 			name: 'Robert Conde',
 			role: 'Co-Organizer (Vice President)',
 			linkedin: 'https://www.linkedin.com/in/rcond/',
-			x: 6000,
-			y: 2020,
-			img: Robert
+			x: 5400,
+			y: 750,
+			img: Robert,
+			team: 'Executive'
+		},
+		{
+			id: 24,
+			name: 'Mya Ramsey',
+			role: 'Executive of Operations',
+			linkedin: 'https://www.linkedin.com/in/mya-ramsey-uf/',
+			x: 5900,
+			y: 810,
+			img: Mya,
+			team: 'Executive'
+		},
+		{
+			id: 25,
+			name: 'Alexander Wang',
+			role: 'Executive of Technology',
+			linkedin: 'https://www.linkedin.com/in/alexanderwangy/',
+			x: 6400,
+			y: 900,
+			img: Alex,
+			team: 'Executive'
+		},
+		{
+			id: 26,
+			name: 'Phoenix Gutierrez',
+			role: 'Executive of Technology',
+			linkedin: 'https://www.linkedin.com/in/phoenixgutierrez/',
+			x: 6900,
+			y: 980,
+			img: Phoenix,
+			team: 'Executive'
+		},
+		{
+			id: 27,
+			name: 'Domenica Simbana Mosquera',
+			role: 'Executive of Finance',
+			linkedin: 'https://www.linkedin.com/in/domenica-simbana/',
+			x: 7400,
+			y: 1100,
+			img: Domenica,
+			team: 'Executive'
+		},
+		{
+			id: 28,
+			name: 'Wilson Goins',
+			role: 'Executive of Finance',
+			linkedin: 'https://www.linkedin.com/in/wilson-goins/',
+			x: 5100,
+			y: 1100,
+			img: Wilson,
+			team: 'Executive'
+		},
+		{
+			id: 29,
+			name: 'Anthony Le',
+			role: 'Executive of Marketing',
+			linkedin: 'https://www.linkedin.com/in/l-anthony/',
+			x: 5600,
+			y: 1150,
+			img: Anthony,
+			team: 'Executive'
+		},
+		{
+			id: 30,
+			name: 'Tina Mei',
+			role: 'Executive of Marketing',
+			linkedin: 'https://www.linkedin.com/in/tmeixyz/',
+			x: 6100,
+			y: 1220,
+			img: Tina,
+			team: 'Executive'
+		},
+		{
+			id: 31,
+			name: 'Alyssa Mann',
+			role: 'Executive of Logistics',
+			linkedin: 'https://www.linkedin.com/in/alyssa-m-mann/',
+			x: 6600,
+			y: 1320,
+			img: Alyssa,
+			team: 'Executive'
+		},
+		{
+			id: 32,
+			name: 'Shane Downs',
+			role: 'Senior Advisor',
+			linkedin: 'https://www.linkedin.com/in/shanemdowns/',
+			x: 7100,
+			y: 1450,
+			img: Shane,
+			team: 'Executive'
 		}
 	];
 
@@ -349,90 +393,40 @@
 		const newIndex = (currentIndex + 1) % players.length;
 		selected = players[newIndex];
 	}
+
+	const teamColors: Record<string, string> = {
+		Operations: '#f7c868', // orange
+		Logistics: '#984af7', // purple
+		Finance: '#4dd662', // green
+		Technology: '#89c9fa', // blue
+		Marketing: '#c9b628', // gold
+		Executive: '#cf99c5' // magenta
+	};
+
+	function getTeamColor(team: string): string {
+		return teamColors[team] || '#7b9b5b'; // default
+	}
 </script>
 
 <svg viewBox="0 0 8346 4828" preserveAspectRatio="xMidYMid meet" class="mx-auto h-auto w-[105%]">
 	<!-- Stadium background -->
 	<image href={Stadium} width="8346" height="4828" />
-	<!-- SwampHacks LED Marquee (Cartoon-ish) -->
-	<g transform="translate(1250, 480) scale(0.4)">
+
+	<!-- Define all clipping paths in one place -->
+	<defs>
+		{#each players as p}
+			<clipPath id={'clip-' + p.id} clipPathUnits="userSpaceOnUse">
+				<circle cx={p.x} cy={p.y} r={selected?.id === p.id ? 230 : 175} />
+			</clipPath>
+		{/each}
+	</defs>
+
+	<g transform="translate(1220, 410) scale(0.42)">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 1200 320"
-			class="mx-auto h-auto w-[600px] [transform:rotateX(32deg)_rotateY(-32deg)_skewX(0deg)]"
+			class="mx-auto h-auto w-[600px] [transform:rotateX(32deg)_rotateY(-30deg)_skewX(0deg)]"
 		>
-			<defs>
-				<!-- Bulb gradient -->
-				<radialGradient id="bulb" cx="50%" cy="40%">
-					<stop offset="0%" stop-color="#fff" />
-					<stop offset="35%" stop-color="#FFE36E" />
-					<stop offset="70%" stop-color="#FFB300" />
-					<stop offset="100%" stop-color="#D47A00" />
-				</radialGradient>
-
-				<!-- Letter fill pattern: repeating LED bulbs -->
-				<pattern id="leds" width="16" height="16" patternUnits="userSpaceOnUse">
-					<circle cx="8" cy="8" r="4.4" fill="url(#bulb)">
-						<!-- subtle per-bulb flicker -->
-						<animate
-							attributeName="opacity"
-							values="0.9;1;0.85;1"
-							dur="1.8s"
-							repeatCount="indefinite"
-						/>
-					</circle>
-				</pattern>
-
-				<!-- Big outer glow for the sign -->
-				<filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-					<feGaussianBlur stdDeviation="6" result="blur" />
-					<feMerge>
-						<feMergeNode in="blur" />
-						<feMergeNode in="SourceGraphic" />
-					</feMerge>
-				</filter>
-
-				<!-- Extra neon halo -->
-				<filter id="neon" x="-60%" y="-60%" width="220%" height="220%">
-					<feGaussianBlur stdDeviation="12" result="soft" />
-					<feColorMatrix
-						type="matrix"
-						values="1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                0 0 0 0.9 0"
-					/>
-					<feMerge>
-						<feMergeNode in="soft" />
-						<feMergeNode in="SourceGraphic" />
-					</feMerge>
-				</filter>
-
-				<!-- A gentle whole-sign flicker -->
-				<filter id="flicker">
-					<feTurbulence
-						type="fractalNoise"
-						baseFrequency="0.8"
-						numOctaves="1"
-						seed="7"
-						result="noise"
-					>
-						<animate
-							attributeName="seed"
-							values="1;3;5;7;9;11;13"
-							dur="3.5s"
-							repeatCount="indefinite"
-						/>
-					</feTurbulence>
-					<feColorMatrix type="saturate" values="0" />
-					<feComponentTransfer>
-						<feFuncA type="table" tableValues="0.95 1 0.92 1" />
-					</feComponentTransfer>
-				</filter>
-
-				<!-- Use the text as a mask so the bulb pattern only shows inside letters -->
-			</defs>
-
 			<!-- Backplate (cartoony sign panel) -->
 			<g filter="url(#glow)">
 				<rect x="40" y="40" width="1120" height="240" rx="26" fill="#1a1a1a" stroke-width="6" />
@@ -448,7 +442,6 @@
 					opacity="0.9"
 				/>
 			</g>
-			<!-- Thin bright inner stroke to sharpen the letters -->
 			<text
 				x="50%"
 				y="60%"
@@ -460,7 +453,7 @@
 				fill="#7b9b5b"
 				opacity="0.9"
 			>
-				SwampHacks Teams
+				SwampHacks Team
 			</text>
 		</svg>
 	</g>
@@ -476,31 +469,26 @@
 			aria-label={`Select ${p.name}`}
 			style="transform-box: fill-box; transform-origin: center;"
 		>
-			<!-- Circle mask definition -->
-			<defs>
-				<clipPath id={'clip-' + p.id}>
-					<circle cx={p.x} cy={p.y} r={selected?.id === p.id ? 230 : 175} />
-				</clipPath>
-			</defs>
+			<!-- Background -->
+			<circle cx={p.x} cy={p.y} r={selected?.id === p.id ? 230 : 175} fill={getTeamColor(p.team)} />
 
-			<circle cx={p.x} cy={p.y} r={selected?.id === p.id ? 230 : 175} fill="#7b9b5b" />
-
-			<!-- Profile image -->
+			<!-- Profile image (now correctly clipped) -->
 			<image
 				href={p.img}
-				x={p.x - (selected?.id === p.id ? 200 : 175)}
-				y={p.y - (selected?.id === p.id ? 200 : 175)}
-				width={selected?.id === p.id ? 400 : 350}
-				height={selected?.id === p.id ? 400 : 350}
+				x={p.x - (selected?.id === p.id ? 220 : 175)}
+				y={p.y - (selected?.id === p.id ? 220 : 175)}
+				width={selected?.id === p.id ? 450 : 350}
+				height={selected?.id === p.id ? 450 : 350}
 				clip-path={`url(#clip-${p.id})`}
+				preserveAspectRatio="xMidYMid slice"
 			/>
 
-			<!-- border circle -->
+			<!-- Border -->
 			<circle
 				cx={p.x}
 				cy={p.y}
 				r={selected?.id === p.id ? 230 : 175}
-				stroke="#7b9b5b"
+				stroke={getTeamColor(p.team)}
 				stroke-width="18"
 				fill="none"
 			/>
@@ -508,6 +496,7 @@
 	{/each}
 </svg>
 
+<!-- Modal for selected player -->
 {#if selected}
 	<div
 		class="fixed inset-0 z-100 flex items-center justify-center bg-black/20 md:items-end md:justify-end md:p-40"
@@ -552,7 +541,7 @@
 
 			<button
 				type="button"
-				class="absolute top-1/2 right-[-40px] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#183000] bg-white text-3xl text-black shadow-lg transition duration-100 hover:scale-104 md:right-[-60px]"
+				class="absolute top-1/2 right-[-40px] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#183000] bg-white text-3xl text-black shadow-lg transition duration-100 hover:scale-102 md:right-[-60px]"
 				on:click={nextPlayer}
 				aria-label="Next player"
 			>
@@ -566,16 +555,23 @@
 					></path>
 				</svg>
 			</button>
+			<!-- Team name -->
+			<p class="mb-2 font-beachday text-4xl" style="color: {getTeamColor(selected.team)};">
+				{selected.team}
+			</p>
 
 			<!-- Player image -->
 			<img
 				src={selected.img}
 				alt={selected.name}
-				class="mx-auto mb-4 h-40 w-40 rounded-full border-4 border-[#7b9b5b] object-cover"
+				class="mx-auto mb-4 h-40 w-40 rounded-full border-4 object-cover"
+				style="border-color: {getTeamColor(selected.team)};"
 			/>
 
 			<!-- Player name -->
-			<h2 class="text-2xl font-semibold text-[#7b9b5b]">{selected.name}</h2>
+			<h2 class="text-2xl font-semibold">
+				{selected.name}
+			</h2>
 
 			<!-- Player role -->
 			<p class="mt-1 text-lg text-[#183000]">{selected.role}</p>
