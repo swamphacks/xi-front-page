@@ -48,6 +48,12 @@
 					>Register to Mentor</Button
 				>
 			</Link>
+
+			<Link href="https://swamphack.notion.site/2813b41de22f804ba106fa4055ad4df5">
+				<Button className="font-beachday text-md text-xl 2xl:text-3xl w-full"
+					>Register to Judge</Button
+				>
+			</Link>
 		</div>
 	</div>
 
