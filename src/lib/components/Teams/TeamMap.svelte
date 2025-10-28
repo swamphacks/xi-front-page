@@ -194,7 +194,7 @@
 			id: 15,
 			name: 'Gaby Smith',
 			role: 'Sponsor Relations Coordinator',
-			linkedin: 'https://www.linkedin.com/in/gabriela-smith-61399026b/',
+			linkedin: 'https://www.linkedin.com/in/gabriella-rose-smith/',
 			x: 3250,
 			y: 2180,
 			img: Gaby,
