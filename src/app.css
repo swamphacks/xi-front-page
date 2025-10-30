@@ -15,6 +15,14 @@
 
 }
 
+html, body {
+	overflow-x: hidden;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 body.modal-open {
 	overflow: hidden;
 }
