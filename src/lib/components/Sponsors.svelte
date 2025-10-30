@@ -1,0 +1,392 @@
+<script>
+	import { onMount } from 'svelte';
+	import FifthThird from '$lib/assets/sponsor-logos/fifth-third.svg';
+	import Amazon from '$lib/assets/sponsor-logos/amazon.svg';
+	import Towerhill from '$lib/assets/sponsor-logos/towerhill-insurance.svg';
+	import Vobile from '$lib/assets/sponsor-logos/vobile.jpg';
+    import Github from '$lib/assets/sponsor-logos/github.png';
+    
+	import LakeImg from '$lib/assets/Lake.svg';
+
+	let client = false;
+
+	onMount(() => {
+		client = true;
+	});
+
+	// Sponsors data with specific grid sizes for desktop:
+	// - rect-long: 3 columns × 1 row (long rectangle)
+	// - small: 1 column × 1 row (small square)
+	// - big-rect: 3 columns × 2 rows (big rectangle)
+	// - rect-wide: 3 columns × 1 row (even longer rectangle)
+	// logoSize: 'small', 'medium', or 'large' - controls logo image size
+	const sponsors = [
+		{
+			name: 'Fifth Third Bank',
+			logo: FifthThird,
+			url: 'https://www.53.com/',
+			gridSize: 'big-rect'
+		},
+		{
+			name: 'Vobile',
+			logo: Vobile,
+			url: 'https://vobile.com/',
+			gridSize: 'big-rect',
+			logoSize: 'large'
+		},
+
+		{
+			name: 'GitHub',
+			logo: Github,
+			url: 'https://github.com/',
+			gridSize: 'small'
+		},
+		{
+			name: 'Sponsor 3',
+			logo: 'https://placehold.co/400x400',
+			url: 'https://www.google.com',
+			gridSize: 'small'
+		},
+		{
+			name: 'Sponsor 4',
+			logo: 'https://placehold.co/400x400',
+			url: 'https://www.google.com',
+			gridSize: 'small'
+		},
+
+		{
+			name: 'Towerhill Insurance',
+			logo: Towerhill,
+			url: 'https://www.thig.com/',
+			gridSize: 'big-rect',
+			logoSize: 'large'
+		},
+		{
+			name: 'Amazon',
+			logo: Amazon,
+			url: 'https://www.amazon.com/',
+			gridSize: 'big-rect'
+		},
+        {
+			name: 'Sponsor 8',
+			logo: "https://placehold.co/400x400",
+			url: 'https://www.google.com',
+			gridSize: 'rect-long'
+		}
+	];
+</script>
+
+{#if client}
+	<section class="relative my-20 min-h-[420px] w-full md:my-60 md:min-h-[520px] lg:min-h-[600px]">
+		<!-- Lake Background Image - Full Opacity -->
+		<div class="absolute inset-0">
+			<img
+				src={LakeImg}
+				alt="Lake Background"
+				class="absolute top-1/2 left-1/2 w-[550%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[180%]"
+			/>
+		</div>
+
+		<!-- Content Container - Positioned over the lake -->
+		<div class="relative z-10 mx-auto max-w-5xl p-4 md:p-10">
+			<!-- Title Section -->
+			<div class="mb-4 md:mb-10 text-center">
+				<h2 class="mb-4 font-beachday text-6xl text-white md:text-6xl lg:text-8xl">Our Sponsors</h2>
+				<p class="font-beachday text-lg text-white/90 md:text-3xl">
+					Thank you to our amazing sponsors who make SwampHacks possible!
+				</p>
+			</div>
+
+			<!-- Sponsors Grid Container - Mixed Sizes -->
+			<div class="sponsors-grid">
+				{#each sponsors as sponsor, index}
+					<div
+						class="group sponsor-card sponsor-{sponsor.gridSize} gentle-float"
+						style="animation-delay: {index * 0.15}s;"
+					>
+						<a
+							href={sponsor.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={sponsor.name}
+							class="relative block h-full"
+						>
+							<div class="sponsor-logo-card">
+								<img
+									src={sponsor.logo}
+									alt={sponsor.name}
+									class="sponsor-logo logo-{sponsor.logoSize || 'medium'}"
+								/>
+							</div>
+							<div class="sponsor-tooltip">
+								Visit {sponsor.name}
+							</div>
+						</a>
+					</div>
+				{/each}
+			</div>
+
+			<!-- Call to Action for Potential Sponsors -->
+			<!-- <div class="mt-12 text-center">
+				<p class="mb-4 font-beachday text-2xl text-white md:text-3xl">
+					Interested in sponsoring SwampHacks?
+				</p>
+				<a
+					href="mailto:sponsor@swamphacks.com"
+					class="inline-block transform rounded-full bg-[#FF6B35] px-8 py-3 font-beachday text-xl text-white transition-all duration-300 hover:scale-105 hover:bg-[#FF8555] md:px-10 md:py-4 md:text-2xl"
+				>
+					Get in Touch
+				</a>
+			</div> -->
+		</div>
+	</section>
+{/if}
+
+<style>
+	@keyframes gentle-float {
+		0%,
+		100% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-8px);
+		}
+	}
+
+	.gentle-float {
+		animation: gentle-float 4s ease-in-out infinite;
+	}
+
+	/* Sponsors Grid - Tight, Mixed Layout */
+	.sponsors-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: minmax(70px, auto);
+		grid-auto-flow: dense;
+		gap: 0.5rem;
+		width: 100%;
+		max-width: 250px;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 768px) {
+		.sponsors-grid {
+			max-width: none;
+			grid-template-columns: repeat(6, 1fr);
+			grid-auto-rows: 100px;
+			gap: 1.5rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.sponsors-grid {
+			grid-template-columns: repeat(6, 1fr);
+			grid-auto-rows: 150px;
+			gap: 1.25rem;
+		}
+	}
+
+	/* Sponsor Card Base */
+	.sponsor-card {
+		position: relative;
+		height: 100%;
+		z-index: 1;
+		transition: z-index 0s;
+	}
+
+	.sponsor-card:hover {
+		z-index: 100;
+	}
+
+	/* Grid Spans for Different Sizes - Mobile (3 columns) */
+	.sponsor-rect-long,
+	.sponsor-rect-wide,
+	.sponsor-big-rect {
+		grid-column: span 3;
+		grid-row: span 1;
+	}
+
+	.sponsor-small {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+
+	.sponsor-big-rect {
+		grid-row: span 2;
+	}
+
+	/* Desktop (6 columns) */
+	@media (min-width: 768px) {
+		/* Long rectangle: 3 columns × 1 row */
+		.sponsor-rect-long {
+			grid-column: span 3;
+			grid-row: span 1;
+		}
+
+		/* Small squares: 1 column × 1 row */
+		.sponsor-small {
+			grid-column: span 1;
+			grid-row: span 1;
+		}
+
+		/* Big rectangle: 3 columns × 2 rows */
+		.sponsor-big-rect {
+			grid-column: span 3;
+			grid-row: span 2;
+		}
+
+		/* Even longer rectangle: 3 columns × 1 row */
+		.sponsor-rect-wide {
+			grid-column: span 3;
+			grid-row: span 1;
+		}
+	}
+
+	/* Logo Card Container */
+	.sponsor-logo-card {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 60px;
+		background-color: white;
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+		transition: all 0.3s ease;
+		overflow: hidden;
+	}
+
+	/* Use height 100% for items that span multiple rows, but not for small items */
+	.sponsor-rect-long .sponsor-logo-card,
+	.sponsor-rect-wide .sponsor-logo-card,
+	.sponsor-big-rect .sponsor-logo-card {
+		height: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.sponsor-logo-card {
+			border-radius: 1rem;
+			min-height: 100px;
+		}
+	}
+
+	/* Different padding for different sizes - Mobile */
+	.sponsor-rect-long .sponsor-logo-card,
+	.sponsor-rect-wide .sponsor-logo-card {
+		padding: 0.5rem;
+		min-height: 60px;
+	}
+
+	.sponsor-big-rect .sponsor-logo-card {
+		padding: 0.5rem;
+		min-height: 120px;
+	}
+
+	.sponsor-small .sponsor-logo-card {
+		padding: 0.4rem;
+		height: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.sponsor-rect-long .sponsor-logo-card,
+		.sponsor-rect-wide .sponsor-logo-card {
+			padding: 1.5rem;
+			min-height: 100px;
+		}
+
+		.sponsor-big-rect .sponsor-logo-card {
+			padding: 2rem;
+			min-height: 200px;
+		}
+
+		.sponsor-small .sponsor-logo-card {
+			height: 100%;
+		}
+	}
+
+	/* Logo Image */
+	.sponsor-logo {
+		height: auto;
+		max-width: 100%;
+		max-height: 100%;
+		padding: 0.25rem;
+		object-fit: contain;
+	}
+
+	@media (min-width: 768px) {
+		.sponsor-logo {
+			padding: 0.5rem;
+		}
+	}
+
+	/* Logo Size Variations - Reduce container padding for large logos */
+	.sponsor-logo-card:has(.logo-large) {
+		padding: 0.25rem !important;
+	}
+
+	@media (min-width: 768px) {
+		.sponsor-logo-card:has(.logo-large) {
+			padding: 1rem !important;
+		}
+
+		.sponsor-big-rect .sponsor-logo-card:has(.logo-large) {
+			padding: 1.25rem !important;
+		}
+	}
+
+	.logo-large {
+		max-width: 100% !important;
+		max-height: 100% !important;
+		padding: 0 !important;
+		width: auto !important;
+		height: auto !important;
+	}
+
+	/* Hover Effects */
+	.group:hover .sponsor-logo-card {
+		transform: scale(1.05);
+		box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.3);
+	}
+
+	.sponsor-rect-long:hover .sponsor-logo-card,
+	.sponsor-rect-wide:hover .sponsor-logo-card {
+		box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.4);
+	}
+
+	.sponsor-big-rect:hover .sponsor-logo-card {
+		box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.5);
+	}
+
+	.sponsor-small:hover .sponsor-logo-card {
+		box-shadow: 0 15px 30px -8px rgba(59, 130, 246, 0.3);
+	}
+
+	/* Tooltip Styles */
+	.sponsor-tooltip {
+		position: absolute;
+		bottom: -2.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		border-radius: 0.5rem;
+		background-color: rgb(31, 41, 55);
+		padding: 0.375rem 0.75rem;
+		font-size: 0.75rem;
+		color: white;
+		opacity: 0;
+		transition: opacity 0.3s;
+		z-index: 101;
+		pointer-events: none;
+	}
+
+	@media (min-width: 768px) {
+		.sponsor-tooltip {
+			bottom: -3rem;
+			font-size: 0.875rem;
+		}
+	}
+
+	.group:hover .sponsor-tooltip {
+		opacity: 1;
+	}
+</style>

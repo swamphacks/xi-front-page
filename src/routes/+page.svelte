@@ -5,7 +5,7 @@
 	import About from '$lib/components/About/About.svelte';
 	import Tracks from '$lib/components/Tracks/Tracks.svelte';
 	import Clubs from '$lib/components/Clubs.svelte';
-	import lakeSrc from '$lib/assets/Lake.png';
+	import Sponsors from '$lib/components/Sponsors.svelte';
 	import Link from '$lib/components/Link/Link.svelte';
 	import { onMount } from 'svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -44,19 +44,12 @@
 			</div>
 			<div class="h-1/3">
 				<FAQ />
-			</div>
-			<!-- <FAQ /> -->
-
-			<div class="flex w-full flex-col items-center justify-center gap-8 bg-grass-background py-16">
-				<h3 class="font-beachday text-5xl text-white">Sponsors</h3>
-				<div
-					class="relative flex min-h-[120vh] w-full items-center justify-center bg-cover bg-center"
-					style="background-image: url({lakeSrc})"
-				>
-					<h4 class="font-beachday text-3xl">To be announced!</h4>
-				</div>
-			</div>
-			<div class="h-[1200px]">
+		</div>
+		<!-- <FAQ /> -->
+		
+		<Sponsors />
+		
+		<div class="h-[1200px]">
 				<Clubs />
 			</div>
 
