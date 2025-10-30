@@ -4,6 +4,8 @@
 	import Amazon from '$lib/assets/sponsor-logos/amazon.svg';
 	import Towerhill from '$lib/assets/sponsor-logos/towerhill-insurance.svg';
 	import Vobile from '$lib/assets/sponsor-logos/vobile.jpg';
+    import AwesomeMotive from '$lib/assets/sponsor-logos/awesome-motive.svg';
+    import MajorLeagueHacking from '$lib/assets/sponsor-logos/mlh.svg';
     import Github from '$lib/assets/sponsor-logos/github.png';
     
 	import LakeImg from '$lib/assets/Lake.svg';
@@ -19,19 +21,26 @@
 	// - small: 1 column × 1 row (small square)
 	// - big-rect: 3 columns × 2 rows (big rectangle)
 	// - rect-wide: 3 columns × 1 row (even longer rectangle)
+	// - co-host: 6 columns × 2 rows (full width, reserved for Co-Host)
 	// logoSize: 'small', 'medium', or 'large' - controls logo image size
 	const sponsors = [
+        {
+			name: 'Co-Host',
+			logo: 'https://placehold.co/400x400',
+			url: 'https://www.google.com',
+			gridSize: 'co-host'
+		},
 		{
 			name: 'Fifth Third Bank',
 			logo: FifthThird,
 			url: 'https://www.53.com/',
-			gridSize: 'big-rect'
+			gridSize: 'rect-long'
 		},
-		{
-			name: 'Vobile',
-			logo: Vobile,
-			url: 'https://vobile.com/',
-			gridSize: 'big-rect',
+        {
+			name: 'Towerhill Insurance',
+			logo: Towerhill,
+			url: 'https://www.thig.com/',
+			gridSize: 'rect-long',
 			logoSize: 'large'
 		},
 
@@ -42,9 +51,9 @@
 			gridSize: 'small'
 		},
 		{
-			name: 'Sponsor 3',
-			logo: 'https://placehold.co/400x400',
-			url: 'https://www.google.com',
+			name: 'Amazon',
+			logo: Amazon,
+			url: 'https://www.amazon.com/',
 			gridSize: 'small'
 		},
 		{
@@ -54,22 +63,16 @@
 			gridSize: 'small'
 		},
 
+
 		{
-			name: 'Towerhill Insurance',
-			logo: Towerhill,
-			url: 'https://www.thig.com/',
-			gridSize: 'big-rect',
-			logoSize: 'large'
-		},
-		{
-			name: 'Amazon',
-			logo: Amazon,
-			url: 'https://www.amazon.com/',
+			name: 'Awesome Motive',
+			logo: AwesomeMotive,
+			url: 'https://awesomemotive.com',
 			gridSize: 'big-rect'
 		},
         {
-			name: 'Sponsor 8',
-			logo: "https://placehold.co/400x400",
+			name: 'Major League Hacking',
+			logo: MajorLeagueHacking,
 			url: 'https://www.google.com',
 			gridSize: 'rect-long'
 		}
@@ -215,6 +218,11 @@
 		grid-row: span 2;
 	}
 
+	.sponsor-co-host {
+		grid-column: span 3;
+		grid-row: span 2;
+	}
+
 	/* Desktop (6 columns) */
 	@media (min-width: 768px) {
 		/* Long rectangle: 3 columns × 1 row */
@@ -240,6 +248,12 @@
 			grid-column: span 3;
 			grid-row: span 1;
 		}
+
+		/* Co-Host: 6 columns × 2 rows */
+		.sponsor-co-host {
+			grid-column: span 6;
+			grid-row: span 2;
+		}
 	}
 
 	/* Logo Card Container */
@@ -259,7 +273,8 @@
 	/* Use height 100% for items that span multiple rows, but not for small items */
 	.sponsor-rect-long .sponsor-logo-card,
 	.sponsor-rect-wide .sponsor-logo-card,
-	.sponsor-big-rect .sponsor-logo-card {
+	.sponsor-big-rect .sponsor-logo-card,
+	.sponsor-co-host .sponsor-logo-card {
 		height: 100%;
 	}
 
@@ -271,7 +286,11 @@
 	}
 
 	/* Different padding for different sizes - Mobile */
-	.sponsor-rect-long .sponsor-logo-card,
+	.sponsor-rect-long .sponsor-logo-card {
+		padding: 0.4rem;
+		min-height: 60px;
+	}
+
 	.sponsor-rect-wide .sponsor-logo-card {
 		padding: 0.5rem;
 		min-height: 60px;
@@ -282,13 +301,22 @@
 		min-height: 120px;
 	}
 
+	.sponsor-co-host .sponsor-logo-card {
+		padding: 0.75rem;
+		min-height: 140px;
+	}
+
 	.sponsor-small .sponsor-logo-card {
 		padding: 0.4rem;
 		height: 100%;
 	}
 
 	@media (min-width: 768px) {
-		.sponsor-rect-long .sponsor-logo-card,
+		.sponsor-rect-long .sponsor-logo-card {
+			padding: 1rem;
+			min-height: 100px;
+		}
+
 		.sponsor-rect-wide .sponsor-logo-card {
 			padding: 1.5rem;
 			min-height: 100px;
@@ -297,6 +325,11 @@
 		.sponsor-big-rect .sponsor-logo-card {
 			padding: 2rem;
 			min-height: 200px;
+		}
+
+		.sponsor-co-host .sponsor-logo-card {
+			padding: 3rem;
+			min-height: 300px;
 		}
 
 		.sponsor-small .sponsor-logo-card {
@@ -319,6 +352,20 @@
 		}
 	}
 
+	/* Make logos larger in rect-long cards */
+	.sponsor-rect-long .sponsor-logo {
+		padding: 0.5rem !important;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	@media (min-width: 768px) {
+		.sponsor-rect-long .sponsor-logo {
+			padding: 0.75rem;
+			transform: scale(1.15);
+		}
+	}
+
 	/* Logo Size Variations - Reduce container padding for large logos */
 	.sponsor-logo-card:has(.logo-large) {
 		padding: 0.25rem !important;
@@ -331,6 +378,10 @@
 
 		.sponsor-big-rect .sponsor-logo-card:has(.logo-large) {
 			padding: 1.25rem !important;
+		}
+
+		.sponsor-co-host .sponsor-logo-card:has(.logo-large) {
+			padding: 2rem !important;
 		}
 	}
 
@@ -355,6 +406,10 @@
 
 	.sponsor-big-rect:hover .sponsor-logo-card {
 		box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.5);
+	}
+
+	.sponsor-co-host:hover .sponsor-logo-card {
+		box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.6);
 	}
 
 	.sponsor-small:hover .sponsor-logo-card {
