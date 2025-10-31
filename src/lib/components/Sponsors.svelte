@@ -7,6 +7,8 @@
     import AwesomeMotive from '$lib/assets/sponsor-logos/awesome-motive.svg';
     import MajorLeagueHacking from '$lib/assets/sponsor-logos/mlh.svg';
     import Github from '$lib/assets/sponsor-logos/github.png';
+	import PureButtons from '$lib/assets/sponsor-logos/pure-buttons.svg';
+	import Cohost from '$lib/assets/sponsor-logos/co-host.svg';
     
 	import LakeImg from '$lib/assets/Lake.svg';
 
@@ -26,7 +28,7 @@
 	const sponsors = [
         {
 			name: 'Co-Host',
-			logo: 'https://placehold.co/400x400',
+			logo: Cohost,
 			url: 'https://www.google.com',
 			gridSize: 'co-host'
 		},
@@ -34,13 +36,14 @@
 			name: 'Fifth Third Bank',
 			logo: FifthThird,
 			url: 'https://www.53.com/',
-			gridSize: 'rect-long'
+			gridSize: 'big-rect',
+			logoSize: 'large'
 		},
         {
 			name: 'Towerhill Insurance',
 			logo: Towerhill,
 			url: 'https://www.thig.com/',
-			gridSize: 'rect-long',
+			gridSize: 'big-rect',
 			logoSize: 'large'
 		},
 
@@ -57,9 +60,9 @@
 			gridSize: 'small'
 		},
 		{
-			name: 'Sponsor 4',
-			logo: 'https://placehold.co/400x400',
-			url: 'https://www.google.com',
+			name: 'Pure Buttons',
+			logo: PureButtons,
+			url: 'https://www.purebuttons.com/',
 			gridSize: 'small'
 		},
 
@@ -80,22 +83,22 @@
 </script>
 
 {#if client}
-	<section class="relative my-20 min-h-[420px] w-full md:my-60 md:min-h-[520px] lg:min-h-[600px]">
+	<section class="relative my-20 min-h-[420px] w-full md:my-60 lg:my-80 md:min-h-[520px] lg:min-h-[600px]">
 		<!-- Lake Background Image - Full Opacity -->
 		<div class="absolute inset-0">
 			<img
 				src={LakeImg}
 				alt="Lake Background"
-				class="absolute top-1/2 left-1/2 w-[550%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[180%]"
+				class="absolute top-1/2 left-1/2 w-[700%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[240%] 2xl:w-[180%]"
 			/>
 		</div>
 
 		<!-- Content Container - Positioned over the lake -->
-		<div class="relative z-10 mx-auto max-w-5xl p-4 md:p-10">
+		<div class="relative mx-auto  max-w-[90%] md:max-w-5xllg:max-w-[80%] 2xl:max-w-[60%] p-4 md:p-10">
 			<!-- Title Section -->
-			<div class="mb-4 md:mb-10 text-center">
-				<h2 class="mb-4 font-beachday text-6xl text-white md:text-6xl lg:text-8xl">Our Sponsors</h2>
-				<p class="font-beachday text-lg text-white/90 md:text-3xl">
+			<div class="mb-10 text-center">
+				<h2 class="mb-4 font-beachday text-5xl text-white md:text-6xl lg:text-8xl">Our Sponsors</h2>
+				<p class="font-beachday text-sm text-white/90 md:text-3xl">
 					Thank you to our amazing sponsors who make SwampHacks possible!
 				</p>
 			</div>
@@ -391,6 +394,13 @@
 		padding: 0 !important;
 		width: auto !important;
 		height: auto !important;
+	}
+
+	@media (min-width: 768px) {
+		.logo-large {
+			max-width: 150% !important;
+			max-height: 150% !important;
+		}
 	}
 
 	/* Hover Effects */
