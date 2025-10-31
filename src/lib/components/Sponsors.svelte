@@ -87,14 +87,14 @@
 			<img
 				src={LakeImg}
 				alt="Lake Background"
-				class="absolute top-1/2 left-1/2 w-[700%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[150%] 2xl:w-[120%]"
+				class="absolute top-1/2 left-1/2 w-[700%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[180%] 2xl:w-[120%]"
 			/>
 		</div>
 
 		<!-- Content Container - Positioned over the lake -->
 		<div class="relative mx-auto  max-w-[90%] md:max-w-5xl lg:max-w-[70%] 2xl:max-w-[60%] p-4 md:p-10">
 			<!-- Title Section -->
-			<div class="mb-10 text-center">
+			<div class="mb-10 md:mb-32 text-center">
 				<h2 class="mb-4 font-beachday text-5xl text-white md:text-6xl lg:text-8xl">Our Sponsors</h2>
 				<p class="font-beachday text-sm text-white/90 md:text-3xl">
 					Thank you to our amazing sponsors who make SwampHacks possible!
