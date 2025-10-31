@@ -26,27 +26,33 @@
 	// - co-host: 6 columns × 2 rows (full width, reserved for Co-Host)
 	// logoSize: 'small', 'medium', or 'large' - controls logo image size
 	const sponsors = [
-        {
-			name: 'Co-Host',
-			logo: Cohost,
-			url: 'https://www.google.com',
-			gridSize: 'co-host'
+        // {
+		// 	name: 'Co-Host',
+		// 	logo: Cohost,
+		// 	url: 'https://www.google.com',
+		// 	gridSize: 'co-host'
+		// },
+
+		{
+			name: 'Awesome Motive',
+			logo: AwesomeMotive,
+			url: 'https://awesomemotive.com',
+			gridSize: 'big-rect'
 		},
 		{
 			name: 'Fifth Third Bank',
 			logo: FifthThird,
 			url: 'https://www.53.com/',
-			gridSize: 'big-rect',
+			gridSize: 'rect-long',
 			logoSize: 'large'
 		},
         {
 			name: 'Towerhill Insurance',
 			logo: Towerhill,
 			url: 'https://www.thig.com/',
-			gridSize: 'big-rect',
+			gridSize: 'rect-long',
 			logoSize: 'large'
 		},
-
 		{
 			name: 'GitHub',
 			logo: Github,
@@ -65,20 +71,12 @@
 			url: 'https://www.purebuttons.com/',
 			gridSize: 'small'
 		},
-
-
-		{
-			name: 'Awesome Motive',
-			logo: AwesomeMotive,
-			url: 'https://awesomemotive.com',
-			gridSize: 'big-rect'
-		},
         {
 			name: 'Major League Hacking',
 			logo: MajorLeagueHacking,
-			url: 'https://www.google.com',
+			url: 'https://mlh.io/',
 			gridSize: 'rect-long'
-		}
+		},
 	];
 </script>
 
@@ -89,12 +87,12 @@
 			<img
 				src={LakeImg}
 				alt="Lake Background"
-				class="absolute top-1/2 left-1/2 w-[700%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[240%] 2xl:w-[180%]"
+				class="absolute top-1/2 left-1/2 w-[700%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[150%] 2xl:w-[120%]"
 			/>
 		</div>
 
 		<!-- Content Container - Positioned over the lake -->
-		<div class="relative mx-auto  max-w-[90%] md:max-w-5xllg:max-w-[80%] 2xl:max-w-[60%] p-4 md:p-10">
+		<div class="relative mx-auto  max-w-[90%] md:max-w-5xl lg:max-w-[70%] 2xl:max-w-[60%] p-4 md:p-10">
 			<!-- Title Section -->
 			<div class="mb-10 text-center">
 				<h2 class="mb-4 font-beachday text-5xl text-white md:text-6xl lg:text-8xl">Our Sponsors</h2>
@@ -265,10 +263,10 @@
 		align-items: center;
 		justify-content: center;
 		min-height: 60px;
-		background-color: white;
-		border-radius: 0.5rem;
+		/* background-color: white; */
+		/* border-radius: 0.5rem; */
 		padding: 0.5rem;
-		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+		/* box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15); */
 		transition: all 0.3s ease;
 		overflow: hidden;
 	}
@@ -343,8 +341,8 @@
 	/* Logo Image */
 	.sponsor-logo {
 		height: auto;
-		max-width: 100%;
-		max-height: 100%;
+		max-width: 120%;
+		max-height: 120%;
 		padding: 0.25rem;
 		object-fit: contain;
 	}
@@ -398,8 +396,8 @@
 
 	@media (min-width: 768px) {
 		.logo-large {
-			max-width: 150% !important;
-			max-height: 150% !important;
+			max-width: 280% !important;
+			max-height: 280% !important;
 		}
 	}
 
