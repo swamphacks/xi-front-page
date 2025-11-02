@@ -5,6 +5,13 @@
 	import CenturyTower from './CenturyTower.svelte';
 	import MovingCloud from './MovingCloud.svelte';
 	import MovingPlane from './MovingPlane.svelte';
+
+	function scrollToAbout() {
+		const aboutSection = document.getElementById('about-section');
+		if (aboutSection) {
+			aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	}
 </script>
 
 <section class="relative h-screen w-full overflow-hidden bg-sky-background">
@@ -63,5 +70,42 @@
 		<CenturyTower />
 	</div>
 
+	<button
+		on:click={scrollToAbout}
+		class="absolute bottom-20 left-1/2 z-50 -translate-x-1/2 cursor-pointer transition-transform duration-400 hover:scale-110 hover:ring-2 hover:ring-black/50 rounded-full p-2"
+		aria-label="Scroll to About section"
+	>
+		<svg
+			class="scroll-arrow w-8 h-8 md:w-10 md:h-10 text-black drop-shadow-lg"
+			fill="none"
+			stroke="currentColor"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M19 14l-7 7m0 0l-7-7m7 7V3"
+			></path>
+		</svg>
+	</button>
+
 	<BushWall />
 </section>
+
+<style>
+	@keyframes bounce-down {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(10px);
+		}
+	}
+
+	.scroll-arrow {
+		animation: bounce-down 2s ease-in-out infinite;
+	}
+</style>

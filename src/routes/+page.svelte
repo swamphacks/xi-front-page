@@ -36,7 +36,7 @@
 			{/if}
 
 			<!-- Content 1 (About Us)-->
-			<div class="h-1/3">
+			<div id="about-section" class="h-1/3">
 				<About />
 			</div>
 			<div>
@@ -66,9 +66,19 @@
 			</div>
 
 			<div class="bg-blue-100"><Footer /></div>
-			<div class="flex justify-center items-center gap-2 p-4 bg-black w-full text-center">
-				<p class="text-[10px] font-beachday text-white md:text-lg">Made with ❤️ by the Swamphacks Team</p>
-				<p class="text-[8px] md:text-base text-white">© 2025</p>
+			<div class="flex flex-col justify-center items-center gap-2 p-4 bg-black w-full text-center">
+				<div class="flex justify-center items-center gap-2 flex-wrap">
+					<p class="text-[10px] font-beachday text-white md:text-lg">Made with ❤️ by the Swamphacks Team</p>
+					<p class="text-[8px] md:text-base text-white">© 2025</p>
+				</div>
+				<a
+					href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="font-beachday text-[10px] text-white/80 hover:text-white transition-colors duration-200 md:text-sm underline"
+				>
+					MLH Code of Conduct
+				</a>
 			</div>
 		</div>
 	</div>
