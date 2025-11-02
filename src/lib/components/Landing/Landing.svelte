@@ -11,12 +11,12 @@
 	<MovingPlane duration={30} />
 
 	<!-- Clouds -->
-	<MovingCloud variant={1} duration={85} />
-	<MovingCloud variant={2} duration={100} />
-	<MovingCloud variant={3} duration={110} />
-	<MovingCloud variant={4} duration={90} />
-	<MovingCloud variant={1} duration={85} />
-	<MovingCloud variant={3} duration={100} />
+	<MovingCloud variant={1} duration={300} />
+	<MovingCloud variant={2} duration={310} />
+	<MovingCloud variant={3} duration={280} />
+	<MovingCloud variant={4} duration={320} />
+	<MovingCloud variant={1} duration={278} />
+	<MovingCloud variant={3} duration={293} />
 
 	<!-- Title + Button Container -->
 	<div
@@ -46,6 +46,12 @@
 			>
 				<Button className="font-beachday text-md text-xl 2xl:text-3xl w-full"
 					>Register to Mentor</Button
+				>
+			</Link>
+
+			<Link href="https://swamphack.notion.site/2813b41de22f804ba106fa4055ad4df5">
+				<Button className="font-beachday text-md text-xl 2xl:text-3xl w-full"
+					>Register to Judge</Button
 				>
 			</Link>
 		</div>
