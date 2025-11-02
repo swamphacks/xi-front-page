@@ -10,6 +10,7 @@
 	import { onMount } from 'svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import CloudDivider from '$lib/components/CloudDivider.svelte';
+	import Teams from '$lib/components/Teams/Teams.svelte';
 
 	let isMobile = false;
 
@@ -51,6 +52,10 @@
 		
 		<div class="h-[1200px]">
 				<Clubs />
+			</div>
+
+			<div class="h-1/3">
+				<Teams />
 			</div>
 
 			<!-- Cloud divider between clubs and footer -->
