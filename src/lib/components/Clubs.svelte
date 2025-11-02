@@ -19,6 +19,7 @@
 	import OSC from '$lib/assets/student-org-logos/OSC.svg';
 	import SHPE from '$lib/assets/student-org-logos/SHPE.svg';
 	import WingHacks from '$lib/assets/student-org-logos/WingHacks.svg';
+	import SWE from '$lib/assets/student-org-logos/SocietyWomenEngineers.svg';
 	let client = false;
 
 	onMount(() => {
@@ -451,13 +452,35 @@
 					>
 						<img
 							src={WingHacks}
-							alt="SHPE"
+							alt="WingHacks"
 							class="w-[100px] opacity-90 transition-opacity hover:opacity-100 md:w-[150px]"
 						/>
 						<div
 							class="absolute left-1/2 -translate-x-1/2 -translate-y-30 transform rounded bg-gray-800 px-2 py-1 text-sm whitespace-nowrap text-white opacity-0 transition-opacity group-hover:opacity-100"
 						>
 							WingHacks
+						</div>
+					</a>
+				</div>
+				<div
+					class="group turn-left absolute top-140 right-5 z-20 cursor-pointer hover:rotate-2 md:top-50 md:-right-70"
+				>
+					<a
+						href="https://uf.swe.org/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="SWE"
+						class="relative block"
+					>
+						<img
+							src={SWE}
+							alt="SWE"
+							class="w-[100px] opacity-90 transition-opacity hover:opacity-100 md:w-[150px]"
+						/>
+						<div
+							class="absolute left-1/2 -translate-x-1/2 -translate-y-30 transform rounded bg-gray-800 px-2 py-1 text-sm whitespace-nowrap text-white opacity-0 transition-opacity group-hover:opacity-100"
+						>
+							Society of Women Engineers
 						</div>
 					</a>
 				</div>
