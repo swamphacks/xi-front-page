@@ -22,13 +22,14 @@
 	// - rect-wide: 3 columns × 1 row (even longer rectangle)
 	// - co-host: 6 columns × 2 rows (full width, reserved for Co-Host)
 	// logoSize: 'small', 'medium', or 'large' - controls logo image size
+	// {
+	// 		name: 'Awesome Motive',
+	// 		logo: AwesomeMotive,
+	// 		url: 'https://awesomemotive.com',
+	// 		gridSize: 'big-rect'
+	// 	},
 	const sponsors = [
-		{
-			name: 'Awesome Motive',
-			logo: AwesomeMotive,
-			url: 'https://awesomemotive.com',
-			gridSize: 'big-rect'
-		},
+
 		{
 			name: 'Fifth Third Bank',
 			logo: FifthThird,
