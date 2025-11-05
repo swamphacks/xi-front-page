@@ -59,7 +59,7 @@
         {
             name: 'Pure Buttons',
             logo: PureButtons,
-            url: 'https://www.purebuttons.com/',
+            url: 'https://mlh.link/MLH-PureButtons-hackathons/',
             gridSize: 'small'
         },
         {
