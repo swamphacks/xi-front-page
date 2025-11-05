@@ -72,7 +72,7 @@
 </script>
 
 {#if client}
-    <section class="relative my-20 min-h-[420px] w-full md:my-60 lg:my-80 md:min-h-[520px] lg:min-h-[600px]">
+    <section class="relative my-30 min-h-[420px] w-full md:my-60 lg:my-80 md:min-h-[520px] lg:min-h-[600px]">
         <!-- Lake Background Image - Full Opacity -->
         <div class="absolute inset-0">
             <img
