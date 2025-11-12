@@ -8,7 +8,7 @@
     import Github from '$lib/assets/sponsor-logos/github.png';
     import PureButtons from '$lib/assets/sponsor-logos/pure-buttons.svg';
     import LakeImg from '$lib/assets/Lake.svg';
-
+    import UFExperientialLearning from '$lib/assets/sponsor-logos/center-experiential-learning.svg';
     let client = false;
 
     onMount(() => {
@@ -66,6 +66,12 @@
             name: 'Major League Hacking',
             logo: MajorLeagueHacking,
             url: 'https://mlh.io/',
+            gridSize: 'rect-long'
+        },
+        {
+            name: 'UF Center of Experiential Learning',
+            logo: UFExperientialLearning,
+            url: 'https://www.eng.ufl.edu/undergraduate/programs-and-partnerships/center-for-experiential-learning/',
             gridSize: 'rect-long'
         }
     ];
@@ -248,6 +254,8 @@
         border-radius: 0.5rem;
         transition: all 0.3s ease;
         overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(4px);
     }
 
     /* Different box shadows for different card sizes */
