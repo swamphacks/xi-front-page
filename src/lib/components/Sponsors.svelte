@@ -8,7 +8,9 @@
     import Github from '$lib/assets/sponsor-logos/github.png';
     import PureButtons from '$lib/assets/sponsor-logos/pure-buttons.svg';
     import LakeImg from '$lib/assets/Lake.svg';
-
+    import UFExperientialLearning from '$lib/assets/sponsor-logos/center-experiential-learning.svg';
+    import MorganMorgan from '$lib/assets/sponsor-logos/morgan-and-morgan.svg';
+    import Andor from '$lib/assets/sponsor-logos/andor.svg';
     let client = false;
 
     onMount(() => {
@@ -67,25 +69,43 @@
             logo: MajorLeagueHacking,
             url: 'https://mlh.io/',
             gridSize: 'rect-long'
+        },
+        {
+            name: 'UF Center of Experiential Learning',
+            logo: UFExperientialLearning,
+            url: 'https://www.eng.ufl.edu/undergraduate/programs-and-partnerships/center-for-experiential-learning/',
+            gridSize: 'rect-long'
+        },
+        {
+            name: 'Morgan & Morgan',
+            logo: MorganMorgan,
+            url: 'https://www.forthepeople.com/',
+            gridSize: 'rect-long'
+        },
+        {
+            name: 'Andor',
+            logo: Andor,
+            url: 'https://andorhealth.com/',
+            gridSize: 'rect-long'
         }
     ];
 </script>
 
 {#if client}
-    <section class="relative my-30 min-h-[420px] w-full md:my-60 lg:my-80 md:min-h-[520px] lg:min-h-[600px]">
+    <section class="relative my-40 min-h-[420px] w-full md:my-60 lg:my-80 md:min-h-[520px] lg:min-h-[600px]">
         <!-- Lake Background Image - Full Opacity -->
         <div class="absolute inset-0">
             <img
                 src={LakeImg}
                 alt="Lake Background"
-                class="absolute top-1/2 left-1/2 w-[350%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[180%] 2xl:w-[120%]"
+                class="absolute top-1/2 left-1/2 w-[500%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover md:w-[180%] 2xl:w-[120%]"
             />
         </div>
 
         <!-- Content Container - Positioned over the lake -->
         <div class="relative mx-auto max-w-[90%] md:max-w-5xl lg:max-w-[70%] 2xl:max-w-[60%] p-4 md:p-10">
             <!-- Title Section -->
-            <div class="mb-10 md:mb-32 text-center">
+            <div class="mb-10 md:mb-20 text-center">
                 <h2 class="mb-4 font-beachday text-5xl text-white md:text-6xl lg:text-8xl">Our Sponsors</h2>
                 <p class="font-beachday text-sm text-white/90 md:text-3xl">
                     Thank you to our amazing sponsors who make SwampHacks possible!
@@ -248,6 +268,8 @@
         border-radius: 0.5rem;
         transition: all 0.3s ease;
         overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(4px);
     }
 
     /* Different box shadows for different card sizes */
