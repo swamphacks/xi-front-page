@@ -131,7 +131,7 @@
 		{
 			question: 'Interested in volunteering?',
 			answer:
-				'On November 17th, we will be having a volunteer/mentor info session. More details will come out as we get closer. See our instagram or discord server for all.'
+				'On November 17th, we will be having a volunteer/mentor info session. Click here to sign up to volunteer! See our instagram or discord server for all.'
 		},
 		{
 			question: 'Who can be a mentor?',
