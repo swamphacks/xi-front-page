@@ -56,9 +56,9 @@
 				>
 			</Link>
 
-			<Link href="https://swamphack.notion.site/2813b41de22f804ba106fa4055ad4df5">
+			<Link href="https://www.notion.so/swamphack/1cb3b41de22f8037a766ccca9787cca7?v=2af3b41de22f80c4a5a1000c26908c4a">
 				<Button className="font-beachday text-md text-xl 2xl:text-3xl w-full"
-					>Register to Judge</Button
+					>Sign Up to Volunteer</Button
 				>
 			</Link>
 		</div>

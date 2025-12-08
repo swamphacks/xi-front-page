@@ -18,6 +18,10 @@
 			'MentorLink',
 			'<a href="https://forms.gle/yiKGESaMMdHbRRTu5" target="_blank" class="underline": underline>Here</a>'
 		);
+		text = text.replace(
+			'Click here to sign up to volunteer!',
+			'<a href="https://swamphack.notion.site/2af3b41de22f80d7a5d9e1ddecf26004?pvs=105?" target="_blank" rel="noopener noreferrer" class="underline text-blue-600 hover:text-blue-800">Click here to sign up to volunteer!</a>'
+		);
 		return text;
 	}
 </script>
