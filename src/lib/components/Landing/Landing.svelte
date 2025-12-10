@@ -56,7 +56,7 @@
 				>
 			</Link>
 
-			<Link href="https://www.notion.so/swamphack/1cb3b41de22f8037a766ccca9787cca7?v=2af3b41de22f80c4a5a1000c26908c4a">
+			<Link href="https://swamphack.notion.site/2af3b41de22f80d7a5d9e1ddecf26004?pvs=105">
 				<Button className="font-beachday text-md text-xl 2xl:text-3xl w-full"
 					>Sign Up to Volunteer</Button
 				>
