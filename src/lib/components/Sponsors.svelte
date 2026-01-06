@@ -12,6 +12,7 @@
 	import MorganMorgan from '$lib/assets/sponsor-logos/morgan-and-morgan.svg';
 	import Andor from '$lib/assets/sponsor-logos/andor.svg';
     import CapitalOne from '$lib/assets/sponsor-logos/capital-one.png';
+	import AestheticPrint from '$lib/assets/sponsor-logos/aesthetic-print.png';
 	let client = false;
 
 	onMount(() => {
@@ -54,24 +55,6 @@
 			logoSize: 'large'
 		},
 		{
-			name: 'GitHub',
-			logo: Github,
-			url: 'https://github.com/',
-			gridSize: 'small'
-		},
-		{
-			name: 'Amazon',
-			logo: Amazon,
-			url: 'https://www.amazon.com/',
-			gridSize: 'small'
-		},
-		{
-			name: 'Pure Buttons',
-			logo: PureButtons,
-			url: 'https://mlh.link/MLH-PureButtons-hackathons/',
-			gridSize: 'small'
-		},
-		{
 			name: 'Major League Hacking',
 			logo: MajorLeagueHacking,
 			url: 'https://mlh.io/',
@@ -100,7 +83,31 @@
             logo: CapitalOne,
             url: 'https://www.capitalone.com/',
             gridSize: 'rect-long'
-        }
+        },
+		{
+			name: 'GitHub',
+			logo: Github,
+			url: 'https://github.com/',
+			gridSize: 'small'
+		},
+		{
+			name: 'Amazon',
+			logo: Amazon,
+			url: 'https://www.amazon.com/',
+			gridSize: 'small'
+		},
+		{
+			name: 'Pure Buttons',
+			logo: PureButtons,
+			url: 'https://mlh.link/MLH-PureButtons-hackathons/',
+			gridSize: 'small'
+		},
+		{
+			name: 'Aesthetic Print',
+			logo: AestheticPrint,
+			url: 'https://aestheticprint.com/',
+			gridSize: 'small'
+		},
 	];
 </script>
 
@@ -303,6 +310,10 @@
 		box-shadow: 0 10px 25px -6px rgba(59, 130, 246, 0.6);
 	}
 
+	.sponsor-co-host .sponsor-logo-card {
+		box-shadow: inset 0 0 8px 2px rgba(37, 99, 235, 0.5), 0 15px 30px -8px rgba(37, 99, 235, 0.5);
+	}
+
 	/* Use height 100% for items that span multiple rows, but not for small items */
 	.sponsor-rect-long .sponsor-logo-card,
 	.sponsor-rect-wide .sponsor-logo-card,
@@ -444,7 +455,7 @@
 	}
 
 	.sponsor-co-host:hover .sponsor-logo-card {
-		box-shadow: 0 35px 70px -15px rgba(59, 130, 246, 0.7);
+		box-shadow: inset 0 0 12px 3px rgba(29, 78, 216, 0.7), 0 25px 50px -10px rgba(29, 78, 216, 0.7);
 	}
 
 	.sponsor-small:hover .sponsor-logo-card {
